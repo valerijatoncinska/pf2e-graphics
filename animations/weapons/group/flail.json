@@ -1,37 +1,68 @@
 {
 	"item:group:flail": [
 		{
+			"label": "trigger-block",
+			"predicates": [
+				"melee"
+			],
 			"triggers": [
 				"attack-roll"
 			],
-			"predicates": [
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.melee_generic.bludgeoning.one_handed"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES",
-					"anchor": {
-						"x": 0.4
+			"contents": [
+				{
+					"label": "Default Attack",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.melee_generic.bludgeoning.one_handed"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
 					}
 				},
-				"reflection": {
-					"y": "random"
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Flagellant/char_al_fl_punish%20%7B8a1da76e-72e1-4a99-b7c1-b276e37c0b99%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "Success",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 5
-				},
-				"rotation": {
-					"type": "relative",
-					"location": "TARGETS"
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Flagellant/char_al_fl_punish_miss%20%7B70545fb0-50cf-42bf-b1ac-77342957cc2b%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "Failure",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
 				}
-			}
+			]
 		}
 	]
 }

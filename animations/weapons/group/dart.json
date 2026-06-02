@@ -1,26 +1,100 @@
 {
 	"item:group:dart": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"attack-roll"
 			],
-			"predicates": [
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.dart.01.throw"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.dart.01.throw.physical.white"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
 				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
+				{
+					"label": "Failure",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_poisondart%20%7B376284a5-17c0-4f3f-b04f-b4c533a769e1%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				},
+				{
+					"label": "Success",
+					"contents": [
+						{
+							"label": "shot-sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_throwndagg%20%7B1d6f2120-b045-49d3-9277-4685d60cd2e9%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_share_imp_knife%20%7B408813ea-8099-4c40-a2a3-ff5f61eb27a2%7D.mp3"
+								],
+								"delay": 800,
+								"volume": 0.3
+							},
+							"label": "impact"
+						},
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.006.yellow"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"randomOffset": 0.5
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS"
+								},
+								"delay": 800
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
 				}
-			}
+			]
 		}
 	]
 }

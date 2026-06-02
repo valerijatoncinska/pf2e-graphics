@@ -38,7 +38,6 @@
 						"radius": 122.5,
 						"delay": 200,
 						"constrainedByWalls": true,
-						"audioChannel": "environment",
 						"position": {
 							"location": "SOURCES"
 						}

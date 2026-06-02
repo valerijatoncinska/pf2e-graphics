@@ -1,7 +1,5 @@
 {
-	"item:slug:claws": "item:slug:claw",
-	"item:slug:tail": "item:slug:claw",
-	"item:slug:claw": [
+	"item:base:scythe": [
 		{
 			"label": "trigger-block",
 			"predicates": [
@@ -16,23 +14,15 @@
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.melee_generic.creature_attack.claw.002.red"
+							"jb2a.melee_attack.05.scythe.01"
 						],
 						"position": {
 							"type": "static",
-							"location": "SOURCES",
-							"anchor": {
-								"x": 0.4
-							}
+							"location": "SOURCES"
 						},
 						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 4
-						},
-						"rotation": {
-							"type": "relative",
-							"location": "TARGETS"
+							"type": "directed",
+							"endpoint": "TARGETS"
 						}
 					}
 				},
@@ -42,6 +32,7 @@
 						"sound": [
 							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_rend%20%7Bca0bf1b8-2971-4f47-b15a-d03923621dfb%7D.mp3"
 						],
+						"delay": 200,
 						"volume": 0.3
 					},
 					"label": "Success",
@@ -60,6 +51,7 @@
 						"sound": [
 							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_rend_miss%20%7B5b501e0a-2c49-4c01-a8ae-8edc4b86641b%7D.mp3"
 						],
+						"delay": 200,
 						"volume": 0.3
 					},
 					"label": "Failure",

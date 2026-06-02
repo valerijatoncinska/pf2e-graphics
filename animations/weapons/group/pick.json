@@ -1,71 +1,74 @@
 {
 	"item:group:pick": [
 		{
+			"label": "trigger-block",
+			"predicates": [
+				"melee"
+			],
 			"triggers": [
 				"attack-roll"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.melee_attack.02.handaxe.01"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES",
-					"anchor": {
-						"x": 0.4
-					}
-				},
-				"reflection": {
-					"y": "random"
-				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 5
-				},
-				"rotation": {
-					"type": "relative",
-					"location": "TARGETS"
-				}
-			},
 			"contents": [
 				{
-					"predicates": [
-						"jb2a:patreon"
-					],
+					"label": "Default Attack",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
 							"jb2a.melee_generic.piercing.one_handed"
 						],
 						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
+							"type": "static",
+							"location": "SOURCES",
+							"anchor": {
+								"x": 0.4
+							}
 						},
 						"size": {
 							"type": "relative",
 							"relativeTo": "SOURCES",
-							"scaling": 5
+							"scaling": 4
+						},
+						"rotation": {
+							"type": "relative",
+							"location": "TARGETS"
 						}
 					}
 				},
 				{
-					"default": true,
 					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.melee_attack.03.trail.01.blueyellow"
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_pick%20%7B72c79a06-7484-4664-b6b2-75b7c958e517%7D.mp3"
 						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
+						"volume": 0.3
+					},
+					"label": "Success",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
 						}
-					}
+					]
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_poisondart%20%7B376284a5-17c0-4f3f-b04f-b4c533a769e1%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "Failure",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
 				}
 			]
 		}

@@ -1,126 +1,207 @@
 {
 	"item:group:sword": [
 		{
-			"triggers": [
-				"attack-roll"
-			],
-			"predicates": [
-				"melee",
-				{
-					"gt": [
-						"target:distance",
-						0
-					]
-				}
-			],
 			"contents": [
 				{
-					"execute": {
-						"type": "graphic",
-						"position": {
-							"type": "static",
-							"location": "SOURCES",
-							"anchor": {
-								"x": 0.4
-							}
-						},
-						"reflection": {
-							"y": "random"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 4.5
-						},
-						"rotation": {
-							"type": "relative",
-							"location": "TARGETS"
+					"predicates": [
+						{
+							"lte": [
+								"item:damage:die:faces",
+								6
+							]
 						}
-					},
+					],
+					"label": "d6-section",
 					"contents": [
 						{
-							"default": true,
+							"label": "animation",
 							"execute": {
 								"type": "graphic",
 								"graphic": [
 									"jb2a.shortsword.melee.01.white"
-								]
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
 							}
 						},
 						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_al_hwy_wickedslice%20%7B81b03b1f-667e-4de7-a36e-f785322ca7e6%7D.mp3"
+								],
+								"volume": 0.3,
+								"delay": 800
+							}
+						},
+						{
+							"label": "success-section",
 							"predicates": [
 								{
-									"gte": [
-										"item:damage:die:faces",
-										8
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
 									]
+								}
+							],
+							"contents": [
+								{
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_al_hwy_openedvein%20%7Ba7e5af04-742f-49ac-8492-41f1a572916f%7D.mp3"
+										],
+										"volume": 0.3,
+										"delay": 500
+									},
+									"label": "attack-sund"
 								},
 								{
-									"lt": [
-										"item:damage:die:faces",
-										12
-									]
-								}
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.greatsword.melee.standard.white",
-									"jb2a.melee_attack.03.greatsword.01"
-								]
-							}
-						},
-						{
-							"predicates": [
+									"label": "impact-animation",
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.impact.001.blue"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS",
+											"randomOffset": 0.5
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS",
+											"scaling": 1.5
+										}
+									}
+								},
 								{
-									"gte": [
-										"item:damage:die:faces",
-										12
-									]
+									"label": "impact-sopund",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_share_imp_knife%20%7B408813ea-8099-4c40-a2a3-ff5f61eb27a2%7D.mp3"
+										],
+										"volume": 0.3
+									}
 								}
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.melee_attack.03.khybersword.01"
-								]
-							}
+							]
 						}
 					]
 				},
 				{
-					"execute": {
-						"type": "sound",
-						"radius": 32.5,
-						"constrainedByWalls": true,
-						"audioChannel": "environment",
-						"position": {
-							"location": "TARGETS"
+					"label": "more-section-d12",
+					"predicates": [
+						{
+							"gte": [
+								"item:damage:die:faces",
+								7
+							]
 						}
-					},
+					],
 					"contents": [
 						{
-							"predicates": [
-								"check:outcome:success"
-							],
+							"label": "melee-animation-section-more",
 							"execute": {
-								"sound": [
-									"graphics-sfx.sword.melee.hit.flesh"
-								]
+								"type": "graphic",
+								"graphic": [
+									"jb2a.melee_attack.03.greatsword.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
 							}
 						},
 						{
-							"predicates": [
-								"check:outcome:failure"
-							],
+							"label": "Failure-More",
 							"execute": {
+								"type": "sound",
 								"sound": [
-									"graphics-sfx.sword.melee.miss"
-								]
-							}
+									"_SFX/__Darkest%20Dungeon/Heroes/Crusader/char_al_cru_smite_miss%20%7Be399ac83-d8b8-46f6-b76b-d19ddafcca08%7D.mp3"
+								],
+								"delay": 300,
+								"volume": 0.3
+							},
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							]
+						},
+						{
+							"label": "success-section",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"contents": [
+								{
+									"label": "sound-section",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Crusader/char_al_cru_smite%20%7Bbff358c6-a158-40e9-8018-b64bc1e9c8fd%7D.mp3"
+										],
+										"delay": 700,
+										"volume": 0.3
+									}
+								},
+								{
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.impact.001.blue"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS",
+											"randomOffset": 0.5
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS",
+											"scaling": 1.5
+										},
+										"delay": 700
+									},
+									"label": "impact-animation"
+								},
+								{
+									"label": "animation-section",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_share_imp_sword%20%7B5ed21b31-fd03-41fd-85e5-727aef54b0c1%7D.mp3"
+										],
+										"volume": 0.3
+									}
+								}
+							]
 						}
 					]
 				}
+			],
+			"triggers": [
+				"attack-roll"
 			]
 		}
 	]

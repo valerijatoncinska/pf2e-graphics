@@ -1,14 +1,14 @@
 {
-	"item:base:rapier": [
+	"item:slug:fire-sword": [
 		{
-			"label": "trigger-section",
+			"label": "d6-section",
 			"contents": [
 				{
 					"label": "animation",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.rapier.melee.01.white"
+							"jb2a.sword.melee.fire.orange"
 						],
 						"position": {
 							"type": "static",
@@ -17,6 +17,9 @@
 						"size": {
 							"type": "directed",
 							"endpoint": "TARGETS"
+						},
+						"elevation": {
+							"zIndex": 2
 						}
 					}
 				},
@@ -58,7 +61,7 @@
 							"execute": {
 								"type": "graphic",
 								"graphic": [
-									"jb2a.impact.001.blue"
+									"jb2a.impact.fire.01.orange"
 								],
 								"position": {
 									"type": "static",
@@ -69,6 +72,10 @@
 									"type": "relative",
 									"relativeTo": "TARGETS",
 									"scaling": 1.5
+								},
+								"delay": 1000,
+								"elevation": {
+									"zIndex": 1
 								}
 							}
 						},
@@ -77,19 +84,13 @@
 							"execute": {
 								"type": "sound",
 								"sound": [
-									"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_share_imp_knife%20%7B408813ea-8099-4c40-a2a3-ff5f61eb27a2%7D.mp3"
+									"graphics-sfx.magic.fire.ignite.03.01"
 								],
-								"volume": 0.3
+								"delay": 1000
 							}
 						}
 					]
 				}
-			],
-			"triggers": [
-				"attack-roll"
-			],
-			"overrides": [
-				"item:group"
 			]
 		}
 	]

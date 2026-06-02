@@ -1,5 +1,5 @@
 {
-	"item:group:knife": [
+	"item:slug:dried-fish": [
 		{
 			"label": "animation-melee",
 			"triggers": [
@@ -10,7 +10,7 @@
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.dagger.melee.02.white"
+							"jb2a.melee_attack.02.bone.01"
 						],
 						"position": {
 							"type": "static",
@@ -25,7 +25,7 @@
 					"label": "Default Animation"
 				},
 				{
-					"label": "sound-section",
+					"label": "Success",
 					"predicates": [
 						{
 							"or": [
@@ -37,32 +37,27 @@
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_cultist_m_claw%20%7B58e372e0-42b4-4432-9acb-61328e21861d%7D.mp3"
+							"_SFX/__Darkest%20Dungeon/Heroes/Bounty%20Hunter/char_share_imp_general%20%7B21584572-d348-41e0-b6c5-d89535816fd1%7D.mp3"
 						],
 						"volume": 0.3
 					}
 				},
 				{
 					"label": "sound-section",
-					"predicates": [
-						{
-							"or": [
-								"check:outcome:failure",
-								"check:outcome:critical-failure"
-							]
-						}
-					],
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_garg_clawflurry%20%7B6f444e16-d801-4781-a92a-79bbbdea552c%7D.mp3"
+							"_SFX/__Darkest%20Dungeon/Heroes/Bounty%20Hunter/char_al_bhr_uppercut%20%7B6a3eca8d-5dc6-4cea-a8d5-b1cac8ac2769%7D.mp3"
 						],
-						"volume": 0.3
+						"volume": 0.4
 					}
 				}
 			],
 			"predicates": [
 				"melee"
+			],
+			"overrides": [
+				"item:group"
 			]
 		},
 		{
@@ -79,7 +74,7 @@
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.dagger.throw.01.white"
+							"jb2a.bone.throw.01"
 						],
 						"position": {
 							"type": "static",
@@ -101,6 +96,9 @@
 						]
 					}
 				}
+			],
+			"overrides": [
+				"item:group"
 			]
 		}
 	]

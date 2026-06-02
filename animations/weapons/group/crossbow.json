@@ -1,26 +1,100 @@
 {
 	"item:group:crossbow": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"attack-roll"
 			],
-			"predicates": [
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.bolt.physical.white02"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bolt.physical.white"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
 				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
+				{
+					"label": "Failure",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Arbalest/char_al_arb_sniper_miss%20%7B9bf2bd90-69dc-436c-bb87-ce70a6999b47%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				},
+				{
+					"label": "Success",
+					"contents": [
+						{
+							"label": "shot-sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Arbalest/char_al_arb_sniper%20%7B86968aa6-a1eb-4a03-995d-c72cda9234a8%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Arbalest/char_al_arb_sniper_imp%20%7B59780cc6-0c34-4c89-a06f-a3d9dd9a8a68%7D.mp3"
+								],
+								"delay": 800,
+								"volume": 0.3
+							},
+							"label": "impact"
+						},
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.006.yellow"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"randomOffset": 0.5
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS"
+								},
+								"delay": 800
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
 				}
-			}
+			]
 		}
 	]
 }

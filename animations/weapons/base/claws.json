@@ -1,6 +1,5 @@
-{
-	"item:slug:claws": "item:slug:claw",
-	"item:slug:tail": "item:slug:claw",
+{   
+    "item:slug:claws": "item:slug:claw",
 	"item:slug:claw": [
 		{
 			"label": "trigger-block",

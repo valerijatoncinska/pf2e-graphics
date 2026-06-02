@@ -1,42 +1,13 @@
 {
 	"item:group:firearm": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"attack-roll"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.arrow"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
-				}
-			},
 			"contents": [
 				{
-					"default": true,
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.bullet.01.orange"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						}
-					}
-				},
-				{
+					"label": "animation-block-d6",
 					"predicates": [
 						{
 							"lte": [
@@ -45,20 +16,194 @@
 							]
 						}
 					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.bullet.02.orange"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.bullet.01.orange"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							},
+							"label": "animation-section-d6"
 						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
+						{
+							"label": "Success-d6",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"contents": [
+								{
+									"label": "hit-shound-d6",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Musketeer/char_al_musk_sidearm%20%7Bdbbfc804-6d9d-422c-928d-a53c192ee09d%7D.mp3"
+										],
+										"volume": 0.3
+									}
+								},
+								{
+									"label": "sound-impact-d6",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Arbalest/char_al_arb_sniper_imp%20%7B59780cc6-0c34-4c89-a06f-a3d9dd9a8a68%7D.mp3"
+										],
+										"delay": 500,
+										"volume": 0.3
+									}
+								},
+								{
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.impact.006.yellow"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS"
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS"
+										}
+									},
+									"label": "impact-animation-d6"
+								}
+							]
+						},
+						{
+							"label": "Failure-d6",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Musketeer/char_al_musk_sidearm_miss%20%7B93cc3d39-79c6-42ea-896b-8419c0579181%7D.mp3"
+								],
+								"volume": 0.3
+							}
 						}
-					}
+					]
+				},
+				{
+					"label": "animation-block-more",
+					"predicates": [
+						{
+							"gte": [
+								"item:damage:die:faces",
+								6
+							]
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.bullet.02.orange"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							}
+						},
+						{
+							"label": "Success-more",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"contents": [
+								{
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Musketeer/char_al_musk_buckshot%20%7B65a57555-5d08-4cdc-9a2f-5a1fd57ca10a%7D.mp3"
+										],
+										"volume": 0.3
+									},
+									"label": "hit-sound"
+								},
+								{
+									"label": "sound-impact",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"_SFX/__Darkest%20Dungeon/Heroes/Musketeer/char_al_musk_buckshot_imp%20%7B6fe84cfd-105d-4dad-a31c-d3fc04f689c7%7D.mp3"
+										],
+										"delay": 500,
+										"volume": 0.3
+									}
+								},
+								{
+									"label": "impact-animation",
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.impact.006.yellow"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS"
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS"
+										},
+										"delay": 500
+									}
+								}
+							]
+						},
+						{
+							"label": "Failure-more",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Musketeer/char_al_musk_buckshot_miss%20%7B71080640-f781-47f5-bede-dfae6c5c19f9%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						}
+					]
 				}
 			]
 		}

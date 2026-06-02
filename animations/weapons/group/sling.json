@@ -1,26 +1,184 @@
 {
 	"item:group:sling": [
 		{
+			"label": "animation-melee",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.melee_generic.bludgeoning.two_handed"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"randomOffset": 0.5
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					},
+					"label": "Default Animation"
+				},
+				{
+					"label": "Success",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"contents": [
+						{
+							"label": "impact-sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Crusader/char_share_imp_shield%20%7B7f41cf13-ba86-45b4-a83b-641d1ae67bfd%7D.mp3"
+								],
+								"delay": 600,
+								"volume": 0.3
+							}
+						},
+						{
+							"label": "impact-animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.009.white"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 1.5
+								}
+							}
+						}
+					]
+				},
+				{
+					"label": "Failure",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.miss.05"
+						]
+					}
+				}
+			],
+			"predicates": [
+				"melee"
+			]
+		},
+		{
 			"triggers": [
 				"attack-roll"
 			],
 			"predicates": [
-				"jb2a:patreon"
+				"ranged"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.slingshot"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
+			"label": "animation-ranged",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.slingshot"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"randomOffset": 0.5
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
 				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
+				{
+					"label": "Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.crossbow.load"
+						],
+						"delay": 200
+					}
+				},
+				{
+					"label": "Sound 2",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						],
+						"delay": 1600
+					}
+				},
+				{
+					"label": "success-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.009.white"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 1.5
+								},
+								"delay": 1000
+							},
+							"label": "animation-section"
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Crusader/char_share_imp_shield%20%7B7f41cf13-ba86-45b4-a83b-641d1ae67bfd%7D.mp3"
+								],
+								"delay": 1900,
+								"volume": 0.3
+							}
+						}
+					]
 				}
-			}
+			]
 		}
 	]
 }

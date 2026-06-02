@@ -1,24 +1,17 @@
 {
 	"item:group:club": [
 		{
-			"predicates": [
-				"melee",
-				{
-					"gt": [
-						"target:distance",
-						0
-					]
-				}
-			],
+			"label": "trigger-block",
 			"triggers": [
 				"attack-roll"
 			],
 			"contents": [
 				{
+					"label": "Default Attack",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.melee_attack.02.club"
+							"jb2a.club.melee.01.white"
 						],
 						"position": {
 							"type": "static",
@@ -27,13 +20,10 @@
 								"x": 0.4
 							}
 						},
-						"reflection": {
-							"y": "random"
-						},
 						"size": {
 							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 5
+							"relativeTo": "TARGETS",
+							"scaling": 6
 						},
 						"rotation": {
 							"type": "relative",
@@ -45,16 +35,37 @@
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"graphics-sfx.generic.hit.blunt"
+							"_SFX/__Darkest%20Dungeon/Heroes/Houndmaster/char_al_hnd_blackjack%20%7Be1f20f44-176e-45d8-827d-8e8a485d68e3%7D.mp3"
 						],
-						"delay": 500,
-						"radius": 32.5,
-						"constrainedByWalls": true,
-						"audioChannel": "environment",
-						"position": {
-							"location": "TARGETS"
+						"volume": 0.3
+					},
+					"label": "Success",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
 						}
-					}
+					]
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Houndmaster/char_al_hnd_blackjack_miss%20%7Baa6831ab-b60e-4938-a283-9b6be053f116%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "Failure",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
 				}
 			]
 		}

@@ -1,127 +1,138 @@
 {
 	"item:group:spear": [
 		{
-			"predicates": [
-				"jb2a:patreon"
-			],
+			"label": "d6-section",
 			"contents": [
 				{
-					"triggers": [
-						"attack-roll"
-					],
-					"predicates": [
-						"thrown"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.spear.throw.01"
-						],
-						"position": {
-							"type": "static",
-							"location": "SOURCES"
+					"label": "melee-animation-section-d6",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.spear.melee.01.white"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES",
+									"randomOffset": 0.5
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							},
+							"label": "melee-animation-section-d6"
 						},
-						"size": {
-							"type": "directed",
-							"endpoint": "TARGETS"
+						{
+							"label": "Success",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_lunge%20%7B9b9898cf-de41-4497-9241-d9dd3fe56e29%7D.mp3"
+								],
+								"delay": 300,
+								"volume": 0.3
+							}
+						},
+						{
+							"label": "Failure",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Shieldbreaker/char_al_sb_pierce_miss%20%7Bc81fbfad-21d8-46ce-ae05-a3ed3d55d04a%7D.mp3"
+								],
+								"delay": 300,
+								"volume": 0.3
+							}
 						}
-					}
-				},
-				{
-					"triggers": [
-						"attack-roll"
 					],
 					"predicates": [
 						"melee"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.spear.melee.01.white"
-						],
-						"position": {
-							"type": "static",
-							"location": "SOURCES",
-							"anchor": {
-								"x": 0.4
-							}
-						},
-						"reflection": {
-							"y": "random"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 5
-						},
-						"rotation": {
-							"type": "relative",
-							"location": "TARGETS"
-						}
-					}
-				}
-			]
-		},
-		{
-			"predicates": [
-				"jb2a:free"
-			],
-			"contents": [
-				{
-					"triggers": [
-						"attack-roll"
-					],
-					"predicates": [
-						"thrown"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.bolt.physical.orange"
-						],
-						"position": {
-							"type": "static",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "directed",
-							"endpoint": "TARGETS"
-						}
-					}
+					]
 				},
 				{
-					"triggers": [
-						"attack-roll"
-					],
-					"predicates": [
-						"melee"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.spear.melee.01.white"
-						],
-						"position": {
-							"type": "static",
-							"location": "SOURCES",
-							"anchor": {
-								"x": 0.4
+					"label": "ranged-animation-section-d6",
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.spear.throw.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
 							}
 						},
-						"reflection": {
-							"y": "random"
+						{
+							"label": "sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_poisondart%20%7B376284a5-17c0-4f3f-b04f-b4c533a769e1%7D.mp3"
+								],
+								"delay": 300,
+								"volume": 0.3
+							},
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							]
 						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 5
-						},
-						"rotation": {
-							"type": "relative",
-							"location": "TARGETS"
+						{
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_lunge%20%7B9b9898cf-de41-4497-9241-d9dd3fe56e29%7D.mp3"
+								],
+								"delay": 300,
+								"volume": 0.3
+							},
+							"label": "success-section"
 						}
-					}
+					],
+					"predicates": [
+						"ranged"
+					]
 				}
+			],
+			"triggers": [
+				"attack-roll"
 			]
 		}
 	]

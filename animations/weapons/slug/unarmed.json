@@ -3,61 +3,81 @@
 	"item:slug:basic-unarmed": "item:slug:fist",
 	"item:slug:fist": [
 		{
-			"predicates": [
-				"melee",
-				{
-					"gt": [
-						"target:distance",
-						0
-					]
-				}
-			],
 			"triggers": [
 				"attack-roll"
 			],
+			"predicates": [
+				"melee"
+			],
 			"contents": [
 				{
+					"label": "animation-section",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.unarmed_strike.physical.01.blue"
+							"jb2a.melee_generic.creature_attack.fist.001.yellow"
 						],
 						"position": {
 							"type": "static",
-							"location": "SOURCES",
-							"anchor": {
-								"x": 0.4
-							}
-						},
-						"reflection": {
-							"y": "random"
+							"location": "SOURCES"
 						},
 						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 5
-						},
-						"rotation": {
-							"type": "relative",
-							"location": "TARGETS",
-							"randomOffset": 0.4
-						},
-						"waitUntilFinished": -500
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
 					}
 				},
 				{
+					"label": "sound-section",
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"graphics-sfx.unarmed"
+							"_SFX/__Darkest%20Dungeon/Heroes/Bounty%20Hunter/char_al_bhr_uppercut%20%7B6a3eca8d-5dc6-4cea-a8d5-b1cac8ac2769%7D.mp3"
 						],
-						"radius": 32.5,
-						"constrainedByWalls": true,
-						"audioChannel": "environment",
-						"position": {
-							"location": "TARGETS"
-						}
+						"volume": 0.25
 					}
+				},
+				{
+					"label": "succ-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"contents": [
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Bounty%20Hunter/char_share_imp_general%20%7B21584572-d348-41e0-b6c5-d89535816fd1%7D.mp3"
+								],
+								"volume": 0.3,
+								"delay": 400
+							},
+							"label": "animation-section"
+						},
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.002.orange"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2.5
+								},
+								"delay": 400
+							}
+						}
+					]
 				}
 			]
 		}

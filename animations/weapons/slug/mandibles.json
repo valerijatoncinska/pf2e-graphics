@@ -1,24 +1,17 @@
 {
-	"item:slug:beak": "item:slug:jaws",	
-	"item:slug:horn": "item:slug:jaws",	
-	"item:slug:horns": "item:slug:jaws",	
-	"item:slug:jaw": "item:slug:jaws",	
-	"item:slug:jaws": [
+	"item:slug:mandibles": [
 		{
-			"label": "trigger-block",
-			"predicates": [
-				"melee"
-			],
+			"label": "trigger-section",
 			"triggers": [
 				"attack-roll"
 			],
 			"contents": [
 				{
-					"label": "Default Attack",
+					"label": "animation-section",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.bite.400px.red"
+							"jb2a.bite.400px.green"
 						],
 						"position": {
 							"type": "static",
@@ -27,19 +20,12 @@
 						"size": {
 							"type": "relative",
 							"relativeTo": "TARGETS",
-							"scaling": 3
+							"scaling": 2
 						}
 					}
 				},
 				{
-					"execute": {
-						"type": "sound",
-						"sound": [
-							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_rend%20%7Bca0bf1b8-2971-4f47-b15a-d03923621dfb%7D.mp3"
-						],
-						"volume": 0.3
-					},
-					"label": "Success",
+					"label": "success-section",
 					"predicates": [
 						{
 							"or": [
@@ -47,17 +33,24 @@
 								"check:outcome:critical-success"
 							]
 						}
-					]
-				},
-				{
+					],
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_rend_miss%20%7B5b501e0a-2c49-4c01-a8ae-8edc4b86641b%7D.mp3"
+							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_sklcom_cudgel%20%7Bd9754016-2ca8-496a-adf9-0cb91813cd51%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				},
+				{
+					"label": "fail-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_sklcom_cudgel_miss%20%7Bd20fba4e-9904-48b2-ab7d-877488b5624f%7D.mp3"
 						],
 						"volume": 0.3
 					},
-					"label": "Failure",
 					"predicates": [
 						{
 							"or": [

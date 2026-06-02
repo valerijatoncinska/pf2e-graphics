@@ -1,14 +1,20 @@
-{
-	"item:base:rapier": [
+{   
+	"item:slug:tentacle" : "item:slug:tentacles",
+	"item:slug:tentacles": [
 		{
-			"label": "trigger-section",
+			"triggers": [
+				"attack-roll"
+			],
+			"predicates": [
+				"melee"
+			],
 			"contents": [
 				{
-					"label": "animation",
+					"label": "animation-section",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.rapier.melee.01.white"
+							"jb2a.melee_generic.bludgeoning.one_handed"
 						],
 						"position": {
 							"type": "static",
@@ -25,14 +31,13 @@
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_al_hwy_wickedslice%20%7B81b03b1f-667e-4de7-a36e-f785322ca7e6%7D.mp3"
+							"_SFX/__Darkest%20Dungeon/Heroes/Bounty%20Hunter/char_al_bhr_uppercut%20%7B6a3eca8d-5dc6-4cea-a8d5-b1cac8ac2769%7D.mp3"
 						],
-						"volume": 0.3,
-						"delay": 800
+						"volume": 0.25
 					}
 				},
 				{
-					"label": "success-section",
+					"label": "succ-section",
 					"predicates": [
 						{
 							"or": [
@@ -46,47 +51,33 @@
 							"execute": {
 								"type": "sound",
 								"sound": [
-									"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_al_hwy_openedvein%20%7Ba7e5af04-742f-49ac-8492-41f1a572916f%7D.mp3"
+									"_SFX/__Darkest%20Dungeon/Heroes/Bounty%20Hunter/char_share_imp_general%20%7B21584572-d348-41e0-b6c5-d89535816fd1%7D.mp3"
 								],
 								"volume": 0.3,
-								"delay": 500
+								"delay": 400
 							},
-							"label": "attack-sund"
+							"label": "animation-section"
 						},
 						{
-							"label": "impact-animation",
 							"execute": {
 								"type": "graphic",
 								"graphic": [
-									"jb2a.impact.001.blue"
+									"jb2a.impact.002.orange"
 								],
 								"position": {
 									"type": "static",
-									"location": "TARGETS",
-									"randomOffset": 0.5
+									"location": "TARGETS"
 								},
 								"size": {
 									"type": "relative",
 									"relativeTo": "TARGETS",
-									"scaling": 1.5
-								}
-							}
-						},
-						{
-							"label": "impact-sopund",
-							"execute": {
-								"type": "sound",
-								"sound": [
-									"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_share_imp_knife%20%7B408813ea-8099-4c40-a2a3-ff5f61eb27a2%7D.mp3"
-								],
-								"volume": 0.3
+									"scaling": 2.5
+								},
+								"delay": 400
 							}
 						}
 					]
 				}
-			],
-			"triggers": [
-				"attack-roll"
 			],
 			"overrides": [
 				"item:group"
