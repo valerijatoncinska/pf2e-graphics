@@ -1,63 +1,87 @@
 {
-	"effect:panache": [
+	"animationSets": [
 		{
 			"triggers": [
 				"effect"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.shield.01.complete.01"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES"
-				}
-			},
 			"contents": [
 				{
+					"label": "Pulse",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.shimmer.01.blue"
+							"jb2a.healing_generic.03.burst.orangepurple"
 						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES",
+							"size": {
+								"type": "relative",
+								"relativeTo": "SOURCES",
+								"scaling": 1.8
+							}
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.8
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"https://assets.forge-vtt.com/bazaar/modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Fire/Warm%20Buff%20004.ogg"
+						],
+						"volume": 0.2
+					},
+					"label": "First Sound"
+				},
+				{
+					"label": "Second Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Jester/char_al_jest_finale%20%7Bc531a4fa-cbb1-4481-8fee-10220be4fc38%7D.mp3"
+						],
+						"volume": 0.2,
+						"fadeIn": {
+							"duration": 300
+						},
+						"delay": 700
+					}
+				},
+				{
+					"label": "Persistent Animation",
+					"execute": {
+						"type": "graphic",
 						"position": {
 							"type": "dynamic",
 							"location": "SOURCES"
 						},
 						"size": {
 							"type": "relative",
-							"relativeTo": "SOURCES"
+							"relativeTo": "SOURCES",
+							"scaling": 2.5
 						},
-						"waitUntilFinished": -100,
-						"filters": [
-							{
-								"type": "ColorMatrix",
-								"options": {
-									"hue": -165
-								}
-							}
-						],
-						"tieToDocuments": true
+						"elevation": {
+							"sortLayer": "belowTokens"
+						},
+						"delay": 1000,
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"graphic": [
+							"jb2a.template_circle.aura.01.complete.small.orangepurple"
+						]
 					}
 				},
 				{
-					"predicates": [
-						{
-							"gte": [
-								"settings:quality",
-								1
-							]
-						}
-					],
+					"label": "Persistent Starts",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.token_border.circle.spinning.blue.001"
+							"jb2a.particles.outward.purple.02.02"
 						],
 						"position": {
 							"type": "dynamic",
@@ -66,38 +90,27 @@
 						"size": {
 							"type": "relative",
 							"relativeTo": "SOURCES",
-							"scaling": 1.6
+							"scaling": 1.8
 						},
-						"filters": [
-							{
-								"type": "ColorMatrix",
-								"options": {
-									"hue": -165
-								}
-							}
-						]
-					},
-					"contents": [
-						{
-							"predicates": [
-								"settings:persistent"
-							],
-							"execute": {
-								"type": "graphic",
-								"tieToDocuments": true,
-								"persistent": "tokenPrototype"
-							}
+						"delay": 1000,
+						"fadeIn": {
+							"duration": 200
 						},
-						{
-							"triggers": [
-								"effect",
-								"start-turn"
-							],
-							"default": true
+						"visibility": {
+							"opacity": 0.75
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"elevation": {
+							"zIndex": 6
 						}
-					]
+					}
 				}
 			]
 		}
-	]
+	],
+	"rollOption": "effect:panache",
+	"id": "TDH1I2q9X8ZbSwFe",
+	"name": "Class: Swashbuckler: Panache",
+	"source": "world"
 }
