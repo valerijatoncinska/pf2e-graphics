@@ -1,5 +1,5 @@
 {
-	"effect:panache": [
+	"animationSets": [
 		{
 			"triggers": [
 				"effect"
@@ -14,12 +14,7 @@
 						],
 						"position": {
 							"type": "dynamic",
-							"location": "SOURCES",
-							"size": {
-								"type": "relative",
-								"relativeTo": "SOURCES",
-								"scaling": 1.8
-							}
+							"location": "SOURCES"
 						},
 						"size": {
 							"type": "relative",
@@ -29,33 +24,37 @@
 					}
 				},
 				{
+					"label": "First Sound",
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"https://assets.forge-vtt.com/bazaar/modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Fire/Warm%20Buff%20004.ogg"
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Fire/Warm%20Buff%20004.ogg"
 						],
 						"volume": 0.2
-					},
-					"label": "First Sound"
+					}
 				},
 				{
 					"label": "Second Sound",
 					"execute": {
+						"fadeIn": {
+							"duration": 300
+						},
+						"delay": 700,
 						"type": "sound",
 						"sound": [
 							"_SFX/__Darkest%20Dungeon/Heroes/Jester/char_al_jest_finale%20%7Bc531a4fa-cbb1-4481-8fee-10220be4fc38%7D.mp3"
 						],
-						"volume": 0.2,
-						"fadeIn": {
-							"duration": 300
-						},
-						"delay": 700
+						"volume": 0.2
 					}
 				},
 				{
 					"label": "Persistent Animation",
 					"execute": {
+						"delay": 1000,
 						"type": "graphic",
+						"graphic": [
+							"jb2a.template_circle.aura.01.complete.small.orangepurple"
+						],
 						"position": {
 							"type": "dynamic",
 							"location": "SOURCES"
@@ -68,17 +67,17 @@
 						"elevation": {
 							"sortLayer": "belowTokens"
 						},
-						"delay": 1000,
 						"persistent": "tokenPrototype",
-						"tieToDocuments": true,
-						"graphic": [
-							"jb2a.template_circle.aura.01.complete.small.orangepurple"
-						]
+						"tieToDocuments": true
 					}
 				},
 				{
 					"label": "Persistent Starts",
 					"execute": {
+						"fadeIn": {
+							"duration": 200
+						},
+						"delay": 1000,
 						"type": "graphic",
 						"graphic": [
 							"jb2a.particles.outward.purple.02.02"
@@ -92,21 +91,21 @@
 							"relativeTo": "SOURCES",
 							"scaling": 1.8
 						},
-						"delay": 1000,
-						"fadeIn": {
-							"duration": 200
-						},
 						"visibility": {
 							"opacity": 0.75
 						},
-						"persistent": "tokenPrototype",
-						"tieToDocuments": true,
 						"elevation": {
 							"zIndex": 6
-						}
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true
 					}
 				}
 			]
 		}
-	]
+	],
+	"rollOption": "effect:panache",
+	"id": "TDH1I2q9X8ZbSwFe",
+	"name": "Class: Swashbuckler: Panache",
+	"source": "world"
 }
