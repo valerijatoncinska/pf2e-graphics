@@ -1,5 +1,5 @@
 {
-	"animationSets": [
+	"effect:panache": [
 		{
 			"triggers": [
 				"effect"
@@ -108,9 +108,5 @@
 				}
 			]
 		}
-	],
-	"rollOption": "effect:panache",
-	"id": "TDH1I2q9X8ZbSwFe",
-	"name": "Class: Swashbuckler: Panache",
-	"source": "world"
+	]
 }
