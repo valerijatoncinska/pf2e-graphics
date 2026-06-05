@@ -1,0 +1,45 @@
+{
+	"origin:item:slug:explode": [
+		{
+			"triggers": [
+				"place-template"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"modules/animated-spell-effects-cartoon/spell-effects/cartoon/electricity/electric_fire_explosion_CIRCLE_02.webm"
+				],
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.2
+				},
+				"position": {
+					"type": "static",
+					"location": "TEMPLATES"
+				}
+			},
+			"label": "animation-section"
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/gamedev-market/Magic_Spells_Sound_Pack/Elemental%20Types/Fire/Fire_Spell_09.ogg"
+				],
+				"volume": 0.5
+			},
+			"label": "sound-section-1"
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/gamedev-market/Magic_Spells_Sound_Pack/Elemental%20Types/Lightning/Lightning_Buff_05.ogg"
+				],
+				"volume": 0.5
+			},
+			"label": "sound-section-2"
+		}
+	]
+}

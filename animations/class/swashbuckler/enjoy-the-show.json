@@ -1,0 +1,42 @@
+{
+	"item:slug:enjoy-the-show": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.firework.01.orangeyellow.01"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Jester/char_al_jest_solo%20%7B8eadb206-dfe6-42e0-b256-9d59524af3c0%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

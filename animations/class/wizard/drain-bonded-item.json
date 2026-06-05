@@ -1,45 +1,58 @@
 {
 	"action:drain-bonded-item": [
 		{
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.particle_burst.01.rune.bluepurple"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 2
+				},
+				"elevation": {
+					"zIndex": 2
+				}
+			},
+			"label": "rune-anim"
+		},
+		{
+			"label": "circle-effect",
 			"triggers": [
 				"action"
 			],
-			"contents": [
-				{
-					"execute": {
-						"type": "sound",
-						"sound": [
-							"graphics-sfx.magic.buff.generic.{01,02,03,04,05}"
-						],
-						"delay": 500
-					}
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"modules/animated-spell-effects-cartoon/spell-effects/cartoon/level 01/detect_magic_blue_800x800.webm"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
 				},
-				{
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.divine_smite.caster.blueyellow"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES",
-							"scaling": 1.5
-						},
-						"filters": [
-							{
-								"type": "ColorMatrix",
-								"options": {
-									"hue": 160
-								}
-							}
-						]
-					}
-				}
-			]
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 3
+				},
+				"elevation": {
+					"zIndex": 1
+				},
+				"delay": 1900
+			}
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/psfx/assets/library/casting/sound/cast-sound-03.ogg"
+				]
+			}
 		}
 	]
 }

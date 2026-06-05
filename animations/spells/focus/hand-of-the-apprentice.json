@@ -1,0 +1,39 @@
+{
+	"origin:effect:hand-of-the-apprentice": [
+		{
+			"label": "trigger-block",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.boon.01.001.blue"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/gamedev-market/Magic_Spells_Sound_Pack/General%20Magic/Cast_01.ogg"
+						],
+						"volume": 0.5
+					}
+				}
+			]
+		}
+	]
+}

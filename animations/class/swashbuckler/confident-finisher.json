@@ -1,0 +1,66 @@
+{
+	"feature:confident-finisher": [
+		{
+			"label": "Class: Swashbuckler: Confident Finisher (On Token)",
+			"triggers": [
+				"damage-roll"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.condition.curse.01.005.purple"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "TARGETS"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "TARGETS",
+					"scaling": 2
+				},
+				"delay": 1000
+			},
+			"predicates": [
+				{
+					"and": [
+						"melee",
+						"finisher:confident",
+						{
+							"or": [
+								"item:trait:finesse",
+								"item:trait:agile"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"triggers": [
+				"damage-roll"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.finisher.01"
+				],
+				"waitUntilFinished": -1300
+			},
+			"predicates": [
+				{
+					"and": [
+						"melee",
+						"finisher:confident",
+						{
+							"or": [
+								"item:trait:finesse",
+								"item:trait:agile"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

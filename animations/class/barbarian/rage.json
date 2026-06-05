@@ -1,0 +1,134 @@
+{
+	"effect:rage": [
+		{
+			"label": "effect-apply",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.extras.tmfx.outpulse.circle.02.normal"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 3
+						},
+						"fadeIn": {
+							"duration": 100
+						},
+						"fadeOut": {
+							"duration": 100
+						},
+						"visibility": {
+							"opacity": 0.25
+						}
+					},
+					"label": "outpulse"
+				},
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.impact.ground_crack.orange.01"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 3
+						},
+						"visibility": {
+							"opacity": 0.9
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						},
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					},
+					"label": "ground-cracks"
+				},
+				{
+					"label": "persistent-glow",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.token_border.circle.static.orange.012"
+						],
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"delay": 500,
+						"visibility": {
+							"opacity": 0.85
+						},
+						"fadeOut": {
+							"duration": 2000
+						},
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						}
+					}
+				},
+				{
+					"label": "ground-cracks-persistent",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.impact.ground_crack.still_frame.01"
+						],
+						"elevation": {
+							"sortLayer": "belowTokens"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 3
+						},
+						"delay": 500,
+						"duration": 10000,
+						"fadeOut": {
+							"duration": 10000
+						},
+						"visibility": {
+							"opacity": 0.75
+						},
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Hellion/char_al_hll_barbyawp%20%7B891b1b79-e308-4dc9-864c-8167b1cf7b7d%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

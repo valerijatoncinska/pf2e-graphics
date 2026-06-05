@@ -1,0 +1,39 @@
+{
+	"effect:fortify-summoning": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.soundwave.01.orangeyellow"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.earth.magnet.wave.01.02"
+						]
+					}
+				}
+			],
+			"triggers": [
+				"effect"
+			]
+		}
+	]
+}

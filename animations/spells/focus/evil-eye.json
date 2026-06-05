@@ -1,0 +1,36 @@
+{
+	"item:evil-eye": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.curse.01.002.purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Courtyard/char_en_croc_movespecial%20%7Baff43636-9e92-4427-a871-b486525b0c16%7D.mp3"
+						]
+					}
+				}
+			]
+		}
+	]
+}

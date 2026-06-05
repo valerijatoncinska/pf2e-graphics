@@ -1,0 +1,113 @@
+{
+	"feat:slug:explosive-leap": [
+		{
+			"label": "Trigger",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "crosshair",
+						"name": "explosive-leap",
+						"template": {
+							"type": "token",
+							"relativeTo": "SOURCES"
+						}
+					}
+				},
+				{
+					"label": "Spell: Dimensional Steps (Blue Swirl)",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.fire.explosion.01"
+						],
+						"elevation": {
+							"sortLayer": "belowTokens"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2.2,
+							"scaleIn": {
+								"duration": 1000,
+								"initialScale": 0,
+								"ease": "easeInOutElastic"
+							},
+							"scaleOut": {
+								"duration": 1000,
+								"finalScale": 0,
+								"ease": "easeInOutElastic"
+							}
+						},
+						"fadeIn": {
+							"duration": 2000,
+							"ease": "easeOutElastic"
+						},
+						"fadeOut": {
+							"duration": 2000,
+							"ease": "easeInElastic"
+						},
+						"duration": 5000
+					},
+					"contents": [
+						{
+							"execute": {
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								}
+							}
+						},
+						{
+							"execute": {
+								"position": {
+									"type": "static",
+									"location": "explosive-leap"
+								}
+							}
+						}
+					]
+				},
+				{
+					"execute": {
+						"type": "animation",
+						"subjects": [
+							"SOURCES"
+						],
+						"delay": 1500,
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "animation",
+						"subjects": [
+							"SOURCES"
+						],
+						"delay": 2500,
+						"position": {
+							"type": "move",
+							"location": "explosive-leap"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "animation",
+						"subjects": [
+							"SOURCES"
+						],
+						"delay": 2500,
+						"fadeIn": {
+							"duration": 500
+						}
+					}
+				}
+			]
+		}
+	]
+}

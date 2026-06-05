@@ -1,0 +1,39 @@
+{
+	"effect:phase-familiar": [
+		{
+			"label": "tigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.misty_step.01.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.earth.ward.04"
+						]
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

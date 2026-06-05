@@ -1,0 +1,153 @@
+{
+	"action:overdrive": [
+		{
+			"triggers": [
+				"skill-check"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.template_circle.radar.loop.1400px.002.pulse.blue"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES"
+						}
+					},
+					"label": "Default Animation"
+				},
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/sci-fi/power-up.mp3"
+						],
+						"volume": 0.3
+					}
+				},
+				{
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"label": "Success",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"position": {
+									"type": "dynamic",
+									"location": "SOURCES"
+								},
+								"graphic": [
+									"jb2a.static_electricity.02.blue"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES"
+								},
+								"delay": 2500
+							},
+							"label": "Animation"
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.buff.weapon.lightning.01"
+								],
+								"delay": 2500
+							},
+							"label": "Sound"
+						}
+					]
+				},
+				{
+					"label": "Failure",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.static_electricity.03.blue"
+								],
+								"position": {
+									"type": "dynamic",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES"
+								},
+								"delay": 2500
+							},
+							"label": "Animation"
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.buff.weapon.lightning.01"
+								],
+								"delay": 2500
+							},
+							"label": "Sound"
+						}
+					],
+					"predicates": [
+						"check:outcome:failure"
+					]
+				},
+				{
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"position": {
+									"type": "dynamic",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 2.5
+								},
+								"graphic": [
+									"animated-spell-effects-cartoon.explosions.15"
+								],
+								"delay": 2500
+							},
+							"label": "Animation"
+						},
+						{
+							"label": "Sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.explosion.01"
+								],
+								"delay": 2500
+							}
+						}
+					],
+					"label": "Critical Failure",
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"label": "Trigger Block"
+		}
+	]
+}

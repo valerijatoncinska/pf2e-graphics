@@ -1,0 +1,39 @@
+{
+	"action:quick-alchemy": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "animation-section-bubble",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bubble.001.002.complete.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/camp_skill_preventativemedicine.mp3"
+						]
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

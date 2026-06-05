@@ -1,0 +1,38 @@
+{
+	"action:mythic-holy-light": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.template_circle.out_pulse.02.burst.yellowwhite"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 5.5
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.holy.cure"
+						]
+					}
+				}
+			]
+		}
+	]
+}

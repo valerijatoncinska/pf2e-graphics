@@ -1,0 +1,47 @@
+{
+	"effect:aura-angelic-halo": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.markers.light.loop.yellow"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.arcane.light.01.03"
+						]
+					}
+				}
+			]
+		}
+	]
+}

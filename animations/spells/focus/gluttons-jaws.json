@@ -1,0 +1,126 @@
+{
+	"item:slug:gluttons-jaws": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"label": "trigger-block",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bolt.poison.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "Success-block",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.bite.400px.red"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2
+								},
+								"delay": 900
+							},
+							"label": "bite-anim"
+						},
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.energy_strands.range.multiple.dark_red.01"
+								],
+								"position": {
+									"type": "dynamic",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "SOURCES"
+								},
+								"delay": 1300
+							},
+							"label": "suck-anim"
+						},
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.condition.curse.01.006.red"
+								],
+								"position": {
+									"type": "dynamic",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 2
+								},
+								"delay": 1700
+							},
+							"label": "feed-anim"
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Occultist/char_al_occ_abyssalart%20%7Bc7411019-db58-45e0-b21a-ecc611896d2a%7D.mp3"
+								],
+								"volume": 0.3
+							},
+							"label": "sound"
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				},
+				{
+					"label": "Failure Block",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Occultist/char_al_occ_abyssalart_miss%20%7Bd81c0f6a-cb29-48ef-a77a-b7a263a1fe3b%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

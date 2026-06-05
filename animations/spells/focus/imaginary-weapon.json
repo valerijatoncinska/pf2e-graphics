@@ -1,0 +1,127 @@
+{
+	"item:slug:imaginary-weapon": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "bludgeoning-section",
+					"predicates": [
+						"item:damage:type:bludgeoning"
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.mace.melee.fire.blue"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							}
+						},
+						{
+							"label": "succ-sound-section",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.magic.holy.bolt.impact.01.02"
+								],
+								"volume": 0.6
+							}
+						},
+						{
+							"label": "fail-sound-section",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Man%20At%20Arms/char_al_maa_crush_miss%20%7B11706a11-14e6-43a4-a843-297c75d6aacf%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						}
+					]
+				},
+				{
+					"label": "slashing-section",
+					"predicates": [
+						"item:damage:type:slashing"
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.sword.melee.fire.blue"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_al_hwy_openedvein%20%7Ba7e5af04-742f-49ac-8492-41f1a572916f%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						},
+						{
+							"label": "succ-sound-section",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.magic.holy.bolt.impact.01.02"
+								],
+								"volume": 0.6,
+								"delay": 600
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

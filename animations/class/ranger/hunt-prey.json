@@ -1,0 +1,38 @@
+{
+	"action:hunt-prey": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "target-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.hunters_mark.pulse.01.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.buff.owl-wisdom"
+						]
+					},
+					"label": "spund-section"
+				}
+			]
+		}
+	]
+}
