@@ -1,0 +1,39 @@
+{
+	"item:slug:void-warp": [
+		{
+			"triggers": [
+				"damage-roll"
+			],
+			"label": "trigger-block",
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.toll_the_dead.purple.complete"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/cantrips/toll-the-dead/v1/toll-the-dead-001.ogg"
+						]
+					}
+				}
+			]
+		}
+	]
+}
