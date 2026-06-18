@@ -1,0 +1,32 @@
+{
+	"effect:take-root": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 2
+				},
+				"graphic": [
+					"jb2a.swirling_leaves.outburst.01.greenorange"
+				]
+			}
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.nature.roots.02.01"
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"effect:bullhorn": [
+		{
+			"label": "Spell Bullhorn (On Token)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Heroes/Man%20At%20Arms/char_al_maa_command%20%7B6f25527d-29b9-4231-b853-ebf5e756e756%7D.mp3"
+				],
+				"volume": 0.3
+			}
+		}
+	]
+}

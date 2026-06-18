@@ -2,61 +2,36 @@
 	"effect:mage-armor": "effect:mystic-armor",
 	"effect:mystic-armor": [
 		{
-			"predicates": [
-				{
-					"gte": [
-						"settings:quality",
-						2
-					]
-				}
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.energy_field.01.blue"
-				],
-				"tieToDocuments": true,
-				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "relative",
-					"scaling": 1.5,
-					"scaleIn": {
-						"duration": 1000,
-						"initialScale": 0,
-						"ease": "easeInOutElastic"
-					},
-					"scaleOut": {
-						"duration": 1500,
-						"finalScale": 0,
-						"ease": "easeInOutElastic"
-					}
-				},
-				"visibility": {
-					"mask": [
-						"SOURCES"
-					]
-				}
-			},
 			"contents": [
 				{
-					"default": true,
-					"triggers": [
-						"start-turn",
-						"effect"
-					]
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.shield.01.intro.yellow"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						}
+					}
 				},
 				{
-					"predicates": [
-						"settings:persistent"
-					],
-					"triggers": [
-						"effect"
-					],
+					"label": "sound-section-up",
 					"execute": {
-						"persistent": "tokenPrototype"
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.buff.generic.{03,08}"
+						]
 					}
 				}
 			]

@@ -1,24 +1,80 @@
 {
 	"effect:runic-body": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"effect"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.magic_signs.rune.transmutation.intro.yellow"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
+			"contents": [
+				{
+					"label": "border-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.token_border.circle.static.green.001"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"zIndex": 1
+						}
+					}
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 1.5
+				{
+					"label": "rune-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.icon.runes.green02"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES",
+							"offset": {
+								"y": 5
+							}
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"zIndex": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.creature.roar.kraken.02.02"
+						]
+					}
 				}
-			}
+			]
 		}
 	]
 }

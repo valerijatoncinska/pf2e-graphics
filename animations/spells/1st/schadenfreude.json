@@ -4,20 +4,82 @@
 			"triggers": [
 				"saving-throw"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.icon.stun.purple"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TARGETS"
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.toll_the_dead.yellow.shockwave"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES"
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.buff.regen.01.01"
+						]
+					}
+				},
+				{
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"label": "failure-section",
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.toll_the_dead.yellow.skull_smoke"
+								],
+								"elevation": {
+									"zIndex": 1
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2
+								},
+								"delay": 1000
+							}
+						},
+						{
+							"label": "sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Monsters/Courtyard/char_en_baron_necdisp_laugh_01%20%7Be9fa9f28-5c36-4783-aa80-ec9dd0b7211a%7D.mp3"
+								],
+								"delay": 1000,
+								"volume": 0.3
+							}
+						}
+					]
 				}
-			}
+			]
 		}
 	]
 }

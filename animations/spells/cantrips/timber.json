@@ -1,0 +1,42 @@
+{
+	"origin:item:slug:timber": [
+		{
+			"label": "trigger-section-2",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.template_line_piercing.nature.01.green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.3
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.2,
+							"relativeTo": "SOURCES"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.animate-tree.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

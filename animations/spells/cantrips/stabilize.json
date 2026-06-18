@@ -1,0 +1,47 @@
+{
+	"spell:stabilize": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "animation-section-target",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.healing_generic.200px.yellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						},
+						"delay": 1500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/EminYILDIRIM/magic/heal/eminyildirim_healing-spell-2.ogg"
+						],
+						"delay": 600
+					}
+				}
+			]
+		}
+	]
+}

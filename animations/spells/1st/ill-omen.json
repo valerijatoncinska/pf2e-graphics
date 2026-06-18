@@ -1,44 +1,75 @@
 {
-	"effect:ill-omen": [
+	"item:ill-omen": [
 		{
-			"predicates": [
-				{
-					"gte": [
-						"settings:quality",
-						1
-					]
-				},
-				"jb2a:patreon"
+			"triggers": [
+				"saving-throw"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.magic_signs.circle.02.necromancy.complete.dark_purple"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 0.8
-				}
-			},
 			"contents": [
 				{
-					"predicates": [
-						"settings:persistent"
-					]
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ward.rune.dark_purple.01"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2.5
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					},
+					"label": "animation-section"
 				},
 				{
-					"triggers": [
-						"effect",
-						"start-turn"
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.curse.05.03"
+						]
+					}
+				},
+				{
+					"label": "failure-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
 					],
-					"default": true
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.curse.01.013.purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
 				}
-			]
+			],
+			"label": "trigger-section"
 		}
 	]
 }

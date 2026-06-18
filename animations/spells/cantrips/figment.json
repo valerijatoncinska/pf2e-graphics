@@ -1,0 +1,19 @@
+{
+	"spell:ghost-sound": "spell:figment",
+	"spell:disguise-magic": "spell:figment",
+	"spell:fold-metal": "spell:figment",
+	"spell:figment": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.nature.buff.bird-flight"
+				],
+				"volume": 0.3
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

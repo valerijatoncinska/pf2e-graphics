@@ -1,0 +1,39 @@
+{
+	"effect:read-the-air": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.energy.06"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.crafting.hammer.craft.02.alert"
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"spell:tremor-signs": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.earth.ranged.trail.loop.rock.01"
+				],
+				"duration": 2000,
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

@@ -1,0 +1,90 @@
+{
+	"item:slashing-gust": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.energy_strands.range.multiple.grey.01"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Air%20and%20Thunder/Blow%20001.ogg"
+						]
+					}
+				},
+				{
+					"label": "success-section",
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.energy_strands.overlay.grey.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2
+								},
+								"delay": 900,
+								"elevation": {
+									"zIndex": 2
+								},
+								"duration": 1200,
+								"fadeIn": {
+									"duration": 300
+								},
+								"fadeOut": {
+									"duration": 300
+								}
+							}
+						},
+						{
+							"label": "sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Air%20and%20Thunder/Storm%20Cast%20001.ogg"
+								],
+								"delay": 900
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

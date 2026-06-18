@@ -1,0 +1,114 @@
+{
+	"item:telekinetic-projectile": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Bludgeoning",
+					"predicates": [
+						"item:damage:bludgeoning"
+					],
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.boulder.toss.01.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							},
+							"label": "animation"
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Earth/Boulder%20Throw%20Cast%20C.ogg"
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "piercing",
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.fork.throw.01.white"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Air/Cyclone%20Blade%20Cast%20B.ogg"
+								]
+							}
+						}
+					],
+					"predicates": [
+						"item:damage:piercing"
+					]
+				},
+				{
+					"label": "slashing",
+					"predicates": [
+						"item:damage:slashing"
+					],
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.chakram.02.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							}
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Air/Cyclone%20Blade%20Cast%20B.ogg"
+								]
+							},
+							"label": "sound-section"
+						}
+					]
+				}
+			],
+			"triggers": [
+				"attack-roll"
+			]
+		}
+	]
+}

@@ -1,32 +1,65 @@
 {
-	"item:slug:charm": [
+	"item:charm": [
 		{
 			"triggers": [
 				"saving-throw"
 			],
-			"predicates": [
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.whirlwind.purple"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TARGETS"
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.on_token_buff.001.003.purplered"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						}
+					},
+					"label": "animation-section"
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES"
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Props%20(Curios)/Darkest%20Dungeon/prop_curio_beacon%20%7Bdcfd13b5-43ab-4209-9adc-3397bd62c328%7D.mp3"
+						],
+						"volume": 0.3
+					}
 				},
-				"fadeIn": {
-					"duration": 250
-				},
-				"fadeOut": {
-					"duration": 500
+				{
+					"label": "failure-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.misc.charm"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						}
+					}
 				}
-			}
+			]
 		}
 	]
 }

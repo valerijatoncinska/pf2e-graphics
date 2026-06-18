@@ -1,0 +1,69 @@
+{
+	"spell:join-pasts": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.magic_signs.rune.02.loop.06.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES"
+						},
+						"delay": 1500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "animation-section-target",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.magic_signs.rune.02.loop.06.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS"
+						},
+						"delay": 1500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/casting/generic/002/cast-generic-001-03.ogg"
+						]
+					}
+				}
+			]
+		}
+	]
+}

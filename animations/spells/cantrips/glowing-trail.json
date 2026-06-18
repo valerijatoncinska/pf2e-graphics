@@ -1,0 +1,16 @@
+{	"spell:know-the-way": "spell:glowing-trail",
+	"spell:illuminate": "spell:glowing-trail",
+	"spell:glowing-trail": [
+		{
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Light/Illuminate.ogg"
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,65 @@
+{
+	"item:acid-splash": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.spell_projectile.poison.greenyellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "Success",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/char_al_plg_disorientingblast_miss%20%7Bb15c9504-56c9-4f30-9a12-d0c133b82cb7%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/char_al_plg_disorientingblast.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "Failuire",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

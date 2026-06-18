@@ -1,0 +1,80 @@
+{
+	"item:live-wire": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Shock/Lightning%20Bolt%20Cast%20C.ogg"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.lightning_bolt.wide.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "success-section",
+					"contents": [
+						{
+							"label": "impact",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.011.red"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 1.5
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"delay": 500
+							}
+						},
+						{
+							"label": "impact-sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Shock/Lightning%20Bolt%20Impact%20C.ogg"
+								],
+								"delay": 500
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

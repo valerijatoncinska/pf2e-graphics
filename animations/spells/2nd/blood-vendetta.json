@@ -1,3 +1,39 @@
 {
-	"item:slug:blood-vendetta": "item:slug:bloodspray-curse"
+	"item:slug:blood-vendetta": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"graphic": [
+							"jb2a.divine_smite.target.dark_red"
+						],
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.break.soul.01.02"
+						]
+					}
+				}
+			]
+		}
+	]
 }

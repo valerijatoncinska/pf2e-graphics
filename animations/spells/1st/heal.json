@@ -1,41 +1,19 @@
 {
 	"item:slug:heal": [
 		{
+			"label": "trigger-section-actions-3",
 			"triggers": [
-				"damage-taken"
+				"damage-roll"
 			],
 			"predicates": [
 				{
-					"gte": [
-						"settings:quality",
-						1
-					]
-				},
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.bullet.01.green"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
+					"not": "spell:cast:actions:3"
 				}
-			}
-		},
-		{
-			"triggers": [
-				"damage-taken"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.healing_generic.400px.green"
+					"jb2a.healing_generic.03.burst.green"
 				],
 				"position": {
 					"type": "dynamic",
@@ -43,11 +21,28 @@
 				},
 				"size": {
 					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 1.5
-				},
-				"delay": 300
+					"relativeTo": "TARGETS",
+					"scaling": 2
+				}
 			}
+		},
+		{
+			"label": "sound-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Heroes/Vestal/char_al_vst_divinegrace%20%7B0dce52c3-c089-4451-9f93-33305d84df5a%7D.mp3"
+				],
+				"volume": 0.3
+			},
+			"predicates": [
+				{
+					"not": "spell:cast:actions:3"
+				}
+			],
+			"triggers": [
+				"damage-roll"
+			]
 		}
 	]
 }

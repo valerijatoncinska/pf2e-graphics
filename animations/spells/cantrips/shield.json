@@ -1,0 +1,144 @@
+{	"effect:forbidding-ward": "effect:shield",
+	"effect:shield": [
+		{
+			"predicates": [
+				{
+					"gte": [
+						"settings:quality",
+						1
+					]
+				}
+			],
+			"contents": [
+				{
+					"label": "sound-shields-shot",
+					"predicates": [
+						"origin-exists"
+					],
+					"triggers": [
+						"effect"
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.holy.protection"
+						],
+						"radius": 32.5,
+						"constrainedByWalls": true,
+						"audioChannel": "environment",
+						"position": {
+							"location": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "graphic-shields-shot",
+					"predicates": [
+						"origin-exists"
+					],
+					"triggers": [
+						"effect"
+					],
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bullet.03.blue"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"reflection": {
+							"x": "always"
+						},
+						"waitUntilFinished": -1000
+					}
+				},
+				{
+					"label": "sound-shields-up",
+					"triggers": [
+						"effect"
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.buff.generic.{03,08}"
+						],
+						"radius": 32.5,
+						"constrainedByWalls": true,
+						"audioChannel": "environment",
+						"position": {
+							"location": "SOURCES"
+						}
+					}
+				},
+				{
+					"label": "graphic-shields",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.shield.01.complete.01.blue"
+						],
+						"tieToDocuments": true,
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.5
+						},
+						"waitUntilFinished": -500
+					},
+					"contents": [
+						{
+							"default": true,
+							"triggers": [
+								"effect",
+								"start-turn"
+							]
+						},
+						{
+							"triggers": [
+								"effect"
+							],
+							"predicates": [
+								"settings:persistent"
+							],
+							"execute": {
+								"persistent": "tokenPrototype",
+								"tieToDocuments": true
+							}
+						}
+					]
+				},
+				{
+					"label": "sound-shields-down",
+					"triggers": [
+						"effect"
+					],
+					"predicates": [
+						"settings:persistent"
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.buff.generic.{01,04,09}",
+							"graphics-sfx.magic.dark.break.mana.01.{01,02}"
+						],
+						"radius": 32.5,
+						"constrainedByWalls": true,
+						"audioChannel": "environment",
+						"position": {
+							"location": "SOURCES"
+						}
+					}
+				}
+			]
+		}
+	]
+}

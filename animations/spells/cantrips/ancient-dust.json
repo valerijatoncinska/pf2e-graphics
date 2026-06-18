@@ -1,0 +1,41 @@
+{
+	"origin:item:slug:ancient-dust": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.breath_weapons02.burst.cone.arcana.dark_black.01"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.2
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.8
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.wave.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

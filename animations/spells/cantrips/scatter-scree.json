@@ -1,0 +1,41 @@
+{
+	"origin:item:slug:scatter-scree": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.falling_rocks.side.2x1.orange"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.3
+							}
+						},
+						"size": {
+							"type": "relative"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.earth.ranged.barrage.throw.01"
+						],
+						"delay": 500
+					}
+				}
+			]
+		}
+	]
+}

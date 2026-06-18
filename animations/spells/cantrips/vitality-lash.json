@@ -1,0 +1,39 @@
+{
+	"item:slug:vitality-lash": [
+		{
+			"triggers": [
+				"damage-roll"
+			],
+			"label": "trigger-block",
+			"contents": [
+				{
+					"label": "animation-toll",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.toll_the_dead.yellow.complete"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/cantrips/toll-the-dead/v1/toll-the-dead-001.ogg"
+						]
+					}
+				}
+			]
+		}
+	]
+}

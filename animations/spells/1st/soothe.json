@@ -2,52 +2,37 @@
 	"item:slug:soothe": [
 		{
 			"triggers": [
-				"damage-taken"
+				"effect"
 			],
-			"predicates": [
+			"label": "animation-section",
+			"contents": [
 				{
-					"gte": [
-						"settings:quality",
-						1
-					]
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.healing_generic.03.burst.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
 				},
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.energy_strands.range.standard.dark_green"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_invigvap%20%7B85177206-1540-4a5a-95e7-a3ee499063ea%7D.mp3"
+						], 
+						"volume": 0.3
+					}
 				}
-			}
-		},
-		{
-			"triggers": [
-				"damage-taken"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.healing_generic.400px.green"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TARGETS"
-				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 1.5
-				},
-				"delay": 500
-			}
+			]
 		}
 	]
 }

@@ -1,0 +1,36 @@
+{
+	"effect:light": [
+		{
+			"label": "Spell: 0 Light (Projectile)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.on_token_buff.002.001.blue"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.3
+				}
+			}
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Light/Cure%20001.ogg"
+				]
+			},
+			"triggers": [
+				"effect"
+			]
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"spell:sigil": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "animation-section-target",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.magic_signs.rune.02.loop"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						},
+						"delay": 1500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/casting/generic/002/cast-generic-001-03.ogg"
+						],
+						"delay": 600
+					}
+				}
+			]
+		}
+	]
+}

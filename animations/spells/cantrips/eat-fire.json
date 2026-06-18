@@ -1,0 +1,78 @@
+{
+	"origin:item:eat-fire": [
+		{
+			"label": "template-section",
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.fog_cloud.01.white"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.2
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"elevation": {
+							"zIndex": 6
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.air.buff.01.05"
+						]
+					}
+				}
+			],
+			"triggers": [
+				"place-template"
+			]
+		},
+		{
+			"label": "effect-section",
+			"contents": [
+				{
+					"label": "animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.shield_themed.above.fire.01.orange"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.fire.buff.01.03"
+						]
+					}
+				}
+			],
+			"triggers": [
+				"effect"
+			]
+		}
+	]
+}

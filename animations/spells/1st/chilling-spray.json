@@ -1,44 +1,42 @@
 {
 	"origin:item:slug:chilling-spray": [
 		{
-			"triggers": [
-				"place-template"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.cone_of_cold.blue"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TEMPLATES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TEMPLATES"
-				}
-			},
+			"label": "trigger-section",
 			"contents": [
 				{
-					"predicates": [
-						{
-							"gte": [
-								"settings:quality",
-								1
-							]
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.breath_weapons02.burst.cone.ice.01"
+						],
+						"size": {
+							"type": "relative",
+							"scaling": 0.7
+						},
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
 						}
-					]
+					}
 				},
 				{
-					"predicates": [
-						{
-							"gte": [
-								"settings:quality",
-								2
-							]
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.ice.loop.02"
+						],
+						"duration": 6000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
 						}
-					]
+					}
 				}
+			],
+			"triggers": [
+				"place-template"
 			]
 		}
 	]

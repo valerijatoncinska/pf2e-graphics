@@ -1,0 +1,16 @@
+{
+	"spell:time-sense": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Heroes/Jester/camp_skill_turn_back_time%20%7B8ebb07a8-54a8-4f4f-b2b8-2d190f6fbcbe%7D.mp3"
+				],
+				"volume": 0.3
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

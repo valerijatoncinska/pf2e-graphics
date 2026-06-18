@@ -1,0 +1,31 @@
+{
+	"origin:item:slug:caustic-blast": [
+		{
+			"label": "Caustic Blast Sound",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.potion.bomb.acid"
+				]
+			}
+		},
+		{
+			"triggers": [
+				"place-template"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.liquid.splash.green"
+				],
+				"position": {
+					"type": "static",
+					"location": "TEMPLATES"
+				},
+				"size": {
+					"type": "relative"
+				}
+			}
+		}
+	]
+}

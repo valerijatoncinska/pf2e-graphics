@@ -1,24 +1,40 @@
 {
-	"effect:slug:aura-courageous-anthem": [
+	"effect:aura-inspire-courage": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"effect"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.bardic_inspiration"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
+			"contents": [
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Cove/char_en_drownedpirate_offkilterjig%20%7B4c13f854-be3a-49e0-b25e-b2edba7339e9%7D.mp3"
+						],
+						"volume": 0.3
+					}
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 5
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bardic_inspiration.greenorange"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2.5
+						}
+					}
 				}
-			}
+			]
 		}
 	]
 }

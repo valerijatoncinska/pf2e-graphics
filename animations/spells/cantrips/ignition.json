@@ -1,0 +1,112 @@
+{
+	"item:ignition": [
+		{
+			"label": "d6-section",
+			"contents": [
+				{
+					"label": "melee-animation",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.melee_generic.slash.01.orange"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							},
+							"label": "melee-animation-section-Melee"
+						},
+						{
+							"label": "Success-Melee",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:success",
+										"check:outcome:critical-success"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.magic.fire.cast.single.01.01"
+								],
+								"delay": 300,
+								"volume": 0.3
+							}
+						},
+						{
+							"label": "Failure-Melee",
+							"predicates": [
+								{
+									"or": [
+										"check:outcome:failure",
+										"check:outcome:critical-failure"
+									]
+								}
+							],
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Man%20At%20Arms/char_al_maa_crush_miss%20%7B11706a11-14e6-43a4-a843-297c75d6aacf%7D.mp3"
+								],
+								"delay": 300,
+								"volume": 0.3
+							}
+						}
+					],
+					"predicates": [
+						"item:melee"
+					]
+				},
+				{
+					"label": "ranged-animation-section",
+					"contents": [
+						{
+							"label": "animation-ranged",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.fire_bolt.orange"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "directed",
+									"endpoint": "TARGETS"
+								}
+							}
+						},
+						{
+							"label": "sound-ranged",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/psfx/assets/library/cantrips/fire-bolt/v1/fire-bolt-001-05ft.ogg"
+								],
+								"delay": 200
+							}
+						}
+					],
+					"predicates": [
+						{
+							"not": "item:melee"
+						}
+					]
+				}
+			],
+			"triggers": [
+				"attack-roll"
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+	"spell:inside-ropes": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.liquid.splash.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/sfx_bleed_01_light_sweetener%20%7B1a0485c6-2e56-4758-81f1-49473096750b%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			],
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

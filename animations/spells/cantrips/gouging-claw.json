@@ -1,0 +1,87 @@
+{
+	"item:slug:gouging-claw": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.melee_generic.creature_attack.claw.002.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "success-section",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.eyes.01.single.dark_red"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 1.5
+								}
+							},
+							"label": "animation-section"
+						},
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_rend%20%7Bca0bf1b8-2971-4f47-b15a-d03923621dfb%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				},
+				{
+					"label": "failure-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_rend_miss%20%7B5b501e0a-2c49-4c01-a8ae-8edc4b86641b%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

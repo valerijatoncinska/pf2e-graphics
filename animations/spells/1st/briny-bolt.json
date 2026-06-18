@@ -1,69 +1,14 @@
 {
-	"item:slug:briny-bolt": [
+	"item:briny-bolt": [
 		{
-			"triggers": [
-				"attack-roll"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.arrow"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
-				}
-			},
+			"label": "trigger-section",
 			"contents": [
 				{
-					"label": "SFX Water Splash",
-					"execute": {
-						"type": "sound",
-						"sound": [
-							"graphics-sfx.magic.water.impact.splash.01.01"
-						],
-						"delay": 500
-					}
-				},
-				{
-					"predicates": [
-						"jb2a:free"
-					],
+					"label": "animation-section",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.ranged.04.projectile.01.green"
-						],
-						"position": {
-							"type": "static",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "directed",
-							"endpoint": "TARGETS"
-						},
-						"filters": [
-							{
-								"type": "ColorMatrix",
-								"options": {
-									"hue": 135
-								}
-							}
-						]
-					}
-				},
-				{
-					"predicates": [
-						"jb2a:patreon"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.ranged.04.projectile.01.blue"
+							"jb2a.ranged_missile.001.blueteal"
 						],
 						"position": {
 							"type": "static",
@@ -74,7 +19,37 @@
 							"endpoint": "TARGETS"
 						}
 					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.water.cast.01"
+						]
+					}
+				},
+				{
+					"label": "imapct-sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.water.impact.bubble.01"
+						],
+						"delay": 700
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
 				}
+			],
+			"triggers": [
+				"attack-roll"
 			]
 		}
 	]

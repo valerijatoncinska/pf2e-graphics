@@ -1,0 +1,93 @@
+{
+	"item:slug:puff-of-poison": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.sleep.cloud.02.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/char_al_plg_noxiousblast_miss%20%7B5f4837d0-482a-4de5-a9ca-f563b13cc417%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				},
+				{
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"label": "failure-section",
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact_themed.poison.greenyellow"
+								],
+								"elevation": {
+									"zIndex": 1
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2
+								},
+								"delay": 1000
+							}
+						},
+						{
+							"label": "sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/char_al_plg_noxiousblast.mp3"
+								],
+								"delay": 1000,
+								"volume": 0.3
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

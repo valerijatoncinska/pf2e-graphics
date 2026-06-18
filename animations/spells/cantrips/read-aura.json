@@ -1,0 +1,39 @@
+{
+	"effect:read-aura": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.detect_magic.circle.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/gamedev-market/Magic_Spells_Sound_Pack/General%20Magic/Negative_Aura_08.ogg"
+						]
+					}
+				}
+			]
+		}
+	]
+}

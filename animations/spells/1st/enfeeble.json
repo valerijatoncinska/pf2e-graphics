@@ -1,26 +1,66 @@
 {
-	"item:slug:enfeeble": [
+	"item:enfeeble": [
 		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Effect",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.smoke.puff.centered.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "Failure",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Weald/char_en_fuseman_hotshot%20%7B74bb7f94-8893-496d-9421-4be7f3160f28%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				},
+				{
+					"label": "Success",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Weald/char_en_fuseman_hotshot_miss%20%7B62dcacdf-4189-4e77-8d97-cbe1acd0d416%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				}
+			],
 			"triggers": [
 				"saving-throw"
-			],
-			"predicates": [
-				"jb2a:patreon"
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.eldritch_blast.dark_red"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
-				}
-			}
+			]
 		}
 	]
 }

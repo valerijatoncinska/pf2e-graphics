@@ -1,0 +1,114 @@
+{
+	"item:slug:torturous-trauma": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.markers.chain.diamond.complete.02.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"duration": 1900,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"zIndex": 1
+						}
+					}
+				},
+				{
+					"label": "Default Sound 1",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.cast.03"
+						],
+						"duration": 400,
+						"volume": 0.5
+					}
+				},
+				{
+					"label": "Default Sound 2",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.crafting.loops.chain.01.01"
+						],
+						"fadeIn": {
+							"duration": 200
+						},
+						"fadeOut": {
+							"duration": 200
+						},
+						"delay": 400,
+						"volume": 0.5
+					}
+				},
+				{
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"label": "failure-section",
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.toll_the_dead.red.skull_smoke"
+								],
+								"elevation": {
+									"zIndex": 2
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2
+								},
+								"delay": 1500
+							}
+						},
+						{
+							"label": "sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/psfx/assets/library/cantrips/toll-the-dead/v1/rasping-whispers-001.ogg"
+								],
+								"delay": 1500,
+								"volume": 0.5
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

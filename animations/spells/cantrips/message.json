@@ -1,0 +1,16 @@
+{
+	"spell:message": [
+		{
+			"triggers": [
+				"action"
+			],
+			"label": "animation-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Light/Cure%20003.ogg"
+				]
+			}
+		}
+	]
+}

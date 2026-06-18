@@ -1,111 +1,42 @@
 {
 	"origin:item:slug:dizzying-colors": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"place-template"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.burning_hands.01.orange"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TEMPLATES"
-				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TEMPLATES"
-				}
-			},
 			"contents": [
 				{
+					"label": "animation-section",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.breath_weapons.cold.cone.blue"
+							"jb2a.smoke.puff.side.02.multicolored"
 						],
 						"position": {
 							"type": "dynamic",
-							"location": "SOURCES"
+							"location": "TEMPLATES"
 						},
 						"size": {
 							"type": "relative",
-							"relativeTo": "SOURCES"
+							"scaling": 0.8
 						},
-						"rotation": {
-							"type": "absolute",
-							"angle": -20
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
 						}
 					}
 				},
 				{
-					"predicates": [
-						"jb2a:patreon"
-					],
+					"label": "sound-section",
 					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.breath_weapons.cold.cone.green"
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Shieldbreaker%20Sneks/char_en_bigadder_molt_miss%20%7Bf09279cb-c105-4c72-9352-b4d2c35e3180%7D.mp3"
 						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						},
-						"rotation": {
-							"type": "absolute",
-							"angle": -10
-						}
-					}
-				},
-				{
-					"predicates": [
-						"jb2a:patreon"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.breath_weapons.cold.cone.orange"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						},
-						"rotation": {
-							"type": "absolute",
-							"angle": 10
-						}
-					}
-				},
-				{
-					"predicates": [
-						"jb2a:patreon"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.breath_weapons.cold.cone.purple"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						},
-						"rotation": {
-							"type": "absolute",
-							"angle": 20
-						}
+						"volume": 0.3
 					}
 				}
 			]

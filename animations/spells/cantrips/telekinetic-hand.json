@@ -1,0 +1,15 @@
+{
+	"spell:telekinetic-hand": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.arcane.buff.03"
+				]
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

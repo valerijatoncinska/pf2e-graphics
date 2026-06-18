@@ -1,29 +1,86 @@
 {
-	"item:slug:command": [
+	"item:command": [
 		{
 			"triggers": [
 				"saving-throw"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.template_circle.out_pulse.02.burst"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TARGETS"
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.cast_generic.01.dark_red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						},
+						"elevation": {
+							"zIndex": 1
+						}
+					},
+					"label": "animation-section"
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES"
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.arcane.cast.02.08"
+						]
+					}
 				},
-				"fadeIn": {
-					"duration": 250
-				},
-				"fadeOut": {
-					"duration": 500
+				{
+					"label": "failure-section",
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.magic_signs.rune.evocation.intro.red"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 1.5
+								},
+								"elevation": {
+									"zIndex": 2
+								},
+								"delay": 800
+							},
+							"label": "animation-section"
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.magic.arcane.buff.04.03"
+								],
+								"delay": 800
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
 				}
-			}
+			]
 		}
 	]
 }

@@ -1,0 +1,36 @@
+{
+	"origin:item:slug:haunting-hymn": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.side_impact.part.shockwave.purple"
+						],
+						"size": {
+							"type": "relative",
+							"scaling": 0.7
+						},
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/spells/Skyrim%20Sound%20Effects%20-%20Shout%20Power_%20Call%20Of%20Valor.mp3"
+						]
+					}
+				}
+			],
+			"triggers": [
+				"place-template"
+			]
+		}
+	]
+}

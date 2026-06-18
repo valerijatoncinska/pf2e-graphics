@@ -1,0 +1,43 @@
+{
+	"effect:rousing-splash": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.water.61"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Water/Tidal%20Surge.ogg"
+						]
+					}
+				}
+			]
+		}
+	],
+	"rollOption": "effect:rousing-splash",
+	"id": "DtEnesBHE39YCin6",
+	"name": "Spell 0: Rousing Splash",
+	"source": "world"
+}

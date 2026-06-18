@@ -1,0 +1,37 @@
+{
+	"item:slug:daze": [
+		{
+			"label": "Daze (On Token)",
+			"triggers": [
+				"saving-throw"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.energy_attack.01.purple"
+				],
+				"position": {
+					"type": "static",
+					"location": "TARGETS"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "TARGETS",
+					"scaling": 3
+				}
+			}
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Monsters/Ruins/char_en_skelbearer_heinousicon%20%7B53ecf537-889a-4676-8113-15b78e8fb85c%7D.mp3"
+				],
+				"volume": 0.3
+			},
+			"triggers": [
+				"saving-throw"
+			]
+		}
+	]
+}

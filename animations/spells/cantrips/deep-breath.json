@@ -1,0 +1,16 @@
+{
+	"spell:deep-breath": [
+		{
+			"label": "animation-section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.water.bubble.prison.01"
+				]
+			}
+		}
+	]
+}

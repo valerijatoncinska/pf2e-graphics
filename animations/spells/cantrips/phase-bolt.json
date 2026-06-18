@@ -1,0 +1,56 @@
+{
+	"item:phase-bolt": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Dark/Shadow%20Bolt%20Impact%20B.ogg"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ranged.01.projectile.01.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "success-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Dark/Hex%20004.ogg"
+						],
+						"delay": 400
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"spell:draw-moisture": [
+		{
+			"label": "Draw Moisture",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.water.heal.01.01"
+				],
+				"volume": 0.5
+			}
+		}
+	]
+}

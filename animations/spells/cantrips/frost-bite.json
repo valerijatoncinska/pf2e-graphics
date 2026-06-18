@@ -1,0 +1,39 @@
+{
+	"item:frost-bite": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.impact_themed.ice_shard.01.blue"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Water%20and%20Ice/Frostbourne%20002.ogg"
+						]
+					}
+				}
+			],
+			"triggers": [
+				"saving-throw"
+			]
+		}
+	]
+}

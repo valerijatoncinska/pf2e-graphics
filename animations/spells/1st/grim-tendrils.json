@@ -1,23 +1,184 @@
 {
 	"origin:item:slug:grim-tendrils": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"place-template"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.energy_strands.range.multiple.purple.01"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TEMPLATES"
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.arms_of_hadar.dark_purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.2
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.15
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
 				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TEMPLATES"
+				{
+					"label": "animation-section-2",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.arms_of_hadar.dark_purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": -0.35
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.15
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "animation-section-3",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.arms_of_hadar.dark_purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": -0.9
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.15
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "animation-section-4",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.arms_of_hadar.dark_purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": -1.45
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.15
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "animation-section-5",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.arms_of_hadar.dark_purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": -2
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.15
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "animation-section-6",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.arms_of_hadar.dark_purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": -2.45
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.15
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Occultist/char_al_occ_hands%20%7B8b932255-db5e-422a-b10f-f8746b6fea93%7D.mp3"
+						],
+						"volume": 0.3
+					}
 				}
-			}
+			]
 		}
 	]
 }

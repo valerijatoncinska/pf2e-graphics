@@ -1,0 +1,45 @@
+{
+	"origin:item:slug:bramble-bush": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.shield.thorn.01"
+						]
+					}
+				},
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.vine.loop.nature.single.02.green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 2
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"fadeIn": {
+							"duration": 600
+						},
+						"fadeOut": {
+							"duration": 600
+						}
+					}
+				}
+			]
+		}
+	]
+}

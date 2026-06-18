@@ -1,0 +1,39 @@
+{
+	"effect:warp-step": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.energy_strands.overlay.blue.01"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.air.teleport.01.in"
+						]
+					}
+				}
+			],
+			"triggers": [
+				"effect"
+			]
+		}
+	]
+}

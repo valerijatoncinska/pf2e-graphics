@@ -1,0 +1,256 @@
+{
+	"item:slug:divine-lance": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Animation Default",
+					"triggers": [
+						"attack-roll"
+					],
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.eldritch_blast.lightblue"
+						],
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"hpf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Light/Consecrate.ogg"
+						]
+					},
+					"label": "Sound Default"
+				},
+				{
+					"label": "Imp Animation",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.explosion.01.blue"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2.5
+						},
+						"delay": 1000
+					}
+				}
+			],
+			"label": "Default",
+			"predicates": [
+				{
+					"not": {
+						"or": [
+							"origin:trait:holy",
+							"origin:trait:unholy"
+						]
+					}
+				}
+			]
+		},
+		{
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"graphic": [
+							"jb2a.eldritch_blast.yellow"
+						]
+					},
+					"label": "Animation",
+					"triggers": [
+						"attack-roll"
+					]
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Vestal/char_al_vst_godshand_miss%20%7B201dd073-0ab0-404f-8bd7-4cc6bff37901%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"label": "Failure Sound"
+				},
+				{
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"label": "Success",
+					"contents": [
+						{
+							"label": "Sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Vestal/char_al_vst_godshand%20%7B3514bd13-0087-4e82-8b2b-c1b0a26f32ab%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						},
+						{
+							"label": "Animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.01.yellow"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2.5
+								},
+								"delay": 1000
+							}
+						}
+					]
+				}
+			],
+			"triggers": [
+				"attack-roll"
+			],
+			"predicates": [
+				"origin:trait:holy"
+			],
+			"label": "Holy1"
+		},
+		{
+			"label": "Unholy",
+			"predicates": [
+				"origin:trait:unholy"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.eldritch_blast.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					},
+					"label": "Animation",
+					"triggers": [
+						"attack-roll"
+					]
+				},
+				{
+					"label": "Failure Sound",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Occultist/char_al_occ_daemons_miss%20%7Bff66ef43-21f5-4f84-b703-a78d6c6abd9c%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				},
+				{
+					"label": "Success Block",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"contents": [
+						{
+							"label": "Animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.01.purple"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2.5
+								},
+								"delay": 1000
+							}
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Occultist/char_al_occ_daemons_miss%20%7Bff66ef43-21f5-4f84-b703-a78d6c6abd9c%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

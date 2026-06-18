@@ -1,0 +1,108 @@
+{
+	"item:needle-darts": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/ranged-magic/generic/missile/001/ranged-magic-missile-only-001-15ft-03.ogg"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ranged.03.projectile.01.yellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "Default Animation2",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ranged.03.projectile.01.yellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"delay": 200
+					}
+				},
+				{
+					"label": "Default Animation3",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ranged.03.projectile.01.yellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"delay": 400
+					}
+				},
+				{
+					"label": "success-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_poisondart%20%7B33c51af6-455f-4848-984e-500b97e79a1c%7D.mp3"
+						]
+					}
+				},
+				{
+					"label": "fail-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Grave%20Robber/char_al_grv_flashingdagg_miss%20%7B93adac53-8d66-4ca3-979c-48909f5882ee%7D.mp3"
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,23 +1,48 @@
 {
 	"item:slug:force-barrage": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"damage-roll"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.magic_missile.purple"
-				],
-				"position": {
-					"type": "static",
-					"location": "SOURCES"
+			"contents": [
+				{
+					"label": "animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.magic_missile.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
 				},
-				"size": {
-					"type": "directed",
-					"endpoint": "TARGETS"
+				{
+					"label": "sound-travel",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.arcane.slash.01"
+						]
+					}
+				},
+				{
+					"label": "sound-impact",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.misc.magical_girl.impact.02"
+						],
+						"delay": 600
+					}
 				}
-			}
+			]
 		}
 	]
 }

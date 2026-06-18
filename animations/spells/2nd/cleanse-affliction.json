@@ -4,21 +4,37 @@
 			"triggers": [
 				"action"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.energy_strands.in.green.01.2"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TARGETS"
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.healing_generic.03.burst.yellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
 				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 2
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_fortvap%20%7B54476d68-d67b-45aa-abcc-f4b5b746ac0c%7D.mp3"
+						],
+						"volume": 0.3
+					}
 				}
-			}
+			]
 		}
 	]
 }

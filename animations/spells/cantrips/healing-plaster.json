@@ -1,0 +1,43 @@
+{
+	"spell:healing-plaster": [
+		{
+			"label": "Animation Section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.shield_themed.above.molten_earth.03.orange"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"duration": 2000,
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			}
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Earth/Stoneskin%20001.ogg"
+				]
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

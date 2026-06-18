@@ -1,31 +1,47 @@
 {
 	"effect:sure-strike": [
 		{
+			"label": "trigger-section",
 			"triggers": [
 				"effect"
 			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.glint.yellow.few.2"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
-				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES"
-				}
-			},
 			"contents": [
 				{
-					"default": true
+					"label": "border-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.token_border.circle.static.blue.004"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"zIndex": 1
+						}
+					}
 				},
 				{
-					"predicates": [
-						"settings:persistent"
-					]
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.buff.weapon.lightning.01"
+						]
+					}
 				}
 			]
 		}
