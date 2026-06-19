@@ -1,0 +1,82 @@
+{
+	"item:slug:spider-sting": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "default-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.curse.01.008.purple"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "default-sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.curse.05.01"
+						]
+					}
+				},
+				{
+					"label": "failure-section",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-success"
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.bite.400px.purple"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 2
+								},
+								"delay": 1000,
+								"elevation": {
+									"zIndex": 2
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_spidspit_spidspit%20%7B2f2285c1-53b8-4915-8003-ee276f7a7f98%7D.mp3"
+								],
+								"volume": 0.3,
+								"delay": 1000
+							}
+						}
+					]
+				}
+			],
+			"triggers": [
+				"saving-throw"
+			]
+		}
+	]
+}

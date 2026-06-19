@@ -1,0 +1,22 @@
+{
+	"spell:carryall": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.weapons.summon"
+				],
+				"duration": 4000,
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

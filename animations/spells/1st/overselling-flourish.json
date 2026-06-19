@@ -1,0 +1,39 @@
+{
+	"item:slug:overselling-flourish": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.curse.01.019.red"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Jester/char_al_jest_finale_miss%20%7B79366853-e0c2-4b53-b85c-4fd6f77271ab%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

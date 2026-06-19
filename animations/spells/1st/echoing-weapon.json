@@ -1,0 +1,15 @@
+{
+	"spell:echoing-weapon": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.debuffs.confused.01.01"
+				]
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"origin:item:slug:horizon-thunder-sphere": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.explosion.02.blue"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.lightning.impact.burst.02.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

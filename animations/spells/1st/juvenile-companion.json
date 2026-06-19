@@ -1,0 +1,40 @@
+{
+	"effect:juvenile-companion": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.boon.01.007.green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Houndmaster/camp_skill_hound_pet%20%7Bbefa997c-641b-412b-aab6-950559c8ddb1%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

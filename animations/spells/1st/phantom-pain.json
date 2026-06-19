@@ -1,0 +1,40 @@
+{
+	"item:slug:phantom-pain": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.markers.simple.001.complete.004.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_festvap%20%7B3f683549-5574-49a3-9624-87b7f871852c%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

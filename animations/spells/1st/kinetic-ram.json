@@ -1,0 +1,39 @@
+{
+	"item:kinetic-ram": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.misty_step.01.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.air.glyph.01"
+						]
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

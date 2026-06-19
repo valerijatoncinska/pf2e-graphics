@@ -1,0 +1,87 @@
+{
+	"origin:item:slug:signal-skyrocket": [
+		{
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bolt.physical.red"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.fireball.explosion.dark_red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.5,
+							"relativeTo": "SOURCES"
+						},
+						"elevation": {
+							"zIndex": 2
+						},
+						"delay": 2000
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.template_circle.radar.loop.1400px.002.pulse.purplered"
+						],
+						"position": {
+							"type": "static",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/3rd-level-spells/fireball/v1/fireball-explosion-01.ogg"
+						],
+						"delay": 2000
+					},
+					"label": "animation-section"
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/3rd-level-spells/fireball/v1/fireball-beam-01.ogg"
+						]
+					},
+					"label": "animation-section"
+				}
+			],
+			"label": "animation-section"
+		}
+	]
+}

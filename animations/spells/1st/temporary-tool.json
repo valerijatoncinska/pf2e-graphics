@@ -1,0 +1,16 @@
+{
+	"spell:temporary-tool": [
+		{
+			"label": "quick-sort-section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.crafting.materials.leather.craft"
+				]
+			}
+		}
+	]
+}

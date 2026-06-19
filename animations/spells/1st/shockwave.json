@@ -1,0 +1,44 @@
+{
+	"origin:item:slug:shockwave": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.side_impact.part.shockwave.blue"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"offset": {
+								"y": 5
+							},
+							"anchor": {
+								"x": 0.1
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.8
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.debuffs.stun.01.04"
+						]
+					}
+				}
+			]
+		}
+	]
+}

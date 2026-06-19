@@ -1,0 +1,51 @@
+{
+	"origin:item:slug:breathe-fire": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.breath_weapons02.burst.cone.fire.orange.01"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.1
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.7
+						},
+						"visibility": {
+							"opacity": 0.75
+						},
+						"duration": 4500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/psfx/assets/library/1st-level-spells/burning-hands/v1/burning-hands-01.ogg"
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"item:concordant-choir": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"label": "Concordant Choir",
+			"contents": [
+				{
+					"label": "Concordant Choir (1 action)",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.soundwave.02.orangeyellow"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dispel.01"
+						]
+					},
+					"label": "Concordant Choir (1 action)"
+				}
+			]
+		}
+	]
+}

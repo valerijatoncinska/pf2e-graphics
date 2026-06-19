@@ -1,0 +1,33 @@
+{
+	"effect:bless": [
+		{
+			"label": "Spell 1: Effect: Bless (On Token)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.icon.runes.yellow"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES",
+					"anchor": {
+						"x": 0.2,
+						"y": 0.2
+					}
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES"
+				},
+				"persistent": "tokenPrototype",
+				"tieToDocuments": true,
+				"visibility": {
+					"opacity": 0.5
+				}
+			}
+		}
+	]
+}

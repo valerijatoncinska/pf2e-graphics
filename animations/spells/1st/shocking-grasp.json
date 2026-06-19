@@ -1,0 +1,68 @@
+{
+	"item:slug:shocking-grasp": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.electricity.23"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section-failure",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.lightning.sparking.01.01"
+						],
+						"duration": 1500,
+						"fadeOut": {
+							"duration": 500
+						}
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				},
+				{
+					"label": "sound-section-success",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.holy.attack.shock.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

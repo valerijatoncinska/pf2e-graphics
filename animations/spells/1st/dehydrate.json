@@ -1,0 +1,38 @@
+{
+	"origin:item:slug:dehydrate": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.air.explosion.red"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.fire.cast.single.01.02"
+						]
+					}
+				}
+			]
+		}
+	]
+}

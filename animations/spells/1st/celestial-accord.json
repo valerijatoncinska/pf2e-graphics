@@ -1,0 +1,41 @@
+{
+	"spell:celestial-accord": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Heroes/Vestal/camp_skill_chant%20%7B923aa918-15b7-4024-8f4f-51acc7fe1428%7D.mp3"
+				],
+				"duration": 4000,
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			},
+			"triggers": [
+				"action"
+			]
+		},
+		{
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.bless.400px.intro.yellow"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES"
+				},
+				"elevation": {
+					"sortLayer": "belowTokens"
+				}
+			}
+		}
+	]
+}

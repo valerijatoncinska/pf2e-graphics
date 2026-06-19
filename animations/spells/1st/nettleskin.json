@@ -1,0 +1,39 @@
+{
+	"item:nettleskin": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"damage-roll"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.impact.earth.01.browngreen"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.firearm.impact.magical.01.04"
+						]
+					}
+				}
+			]
+		}
+	]
+}

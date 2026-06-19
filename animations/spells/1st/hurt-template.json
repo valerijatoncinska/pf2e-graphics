@@ -1,0 +1,39 @@
+{
+	"origin:item:slug:harm": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "template-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.cast_generic.01.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.1
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Occultist/camp_skill_darkritual.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

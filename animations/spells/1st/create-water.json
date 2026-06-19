@@ -1,0 +1,22 @@
+{
+	"spell:create-water": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.water.wave.03.02"
+				],
+				"duration": 4000,
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

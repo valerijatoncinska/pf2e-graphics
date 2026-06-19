@@ -1,0 +1,56 @@
+{
+	"item:flense": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ranged.01.projectile.01.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.bow.magical.arcane.01.01"
+						]
+					}
+				},
+				{
+					"label": "hit-sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.bow.magical.arcane.01.04"
+						],
+						"delay": 300
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				}
+			],
+			"triggers": [
+				"attack-roll"
+			]
+		}
+	]
+}

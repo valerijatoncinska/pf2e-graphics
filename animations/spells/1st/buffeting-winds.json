@@ -1,0 +1,45 @@
+{
+	"origin:item:slug:buffeting-winds": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.air.gust.gray"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"y": 0.9
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.7
+						},
+						"rotation": {
+							"type": "absolute",
+							"angle": -90
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.air.gust.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

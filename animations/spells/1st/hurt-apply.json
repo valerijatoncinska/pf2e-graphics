@@ -1,0 +1,49 @@
+{
+	"item:slug:harm": [
+		{
+			"label": "animation-section-impact",
+			"triggers": [
+				"damage-roll"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.impact_themed.skull"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "TARGETS"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "TARGETS",
+					"scaling": 1.5
+				},
+				"delay": 500
+			},
+			"predicates": [
+				{
+					"not": "spell:cast:actions:3"
+				}
+			]
+		},
+		{
+			"label": "sound-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Heroes/Occultist/camp_skill_darkritual.mp3"
+				],
+				"volume": 0.3
+			},
+			"predicates": [
+				{
+					"not": "spell:cast:actions:3"
+				}
+			],
+			"triggers": [
+				"damage-roll"
+			]
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"origin:item:slug:500-toads": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.template_square.symbol.out_flow.drop.dark_green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 2
+						},
+						"visibility": {
+							"opacity": 0.75
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/creatures/frogs-pond-sound.mp3"
+						]
+					}
+				}
+			]
+		}
+	]
+}

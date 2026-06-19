@@ -1,0 +1,44 @@
+{
+	"effect:sanctuary": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bless.200px.loop.yellow"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.8
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.arcane.light.01.03"
+						]
+					}
+				}
+			]
+		}
+	]
+}

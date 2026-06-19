@@ -1,0 +1,42 @@
+{
+	"effect:fleet-step": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.on_token_buff.002.003.orangeyellow"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.8
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.buff.horse-speed"
+						]
+					}
+				}
+			]
+		}
+	]
+}

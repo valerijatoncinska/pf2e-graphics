@@ -1,0 +1,16 @@
+{
+	"spell:quick-sort": [
+		{
+			"label": "quick-sort-section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.crafting.materials.paper.sheets.03.01"
+				]
+			}
+		}
+	]
+}

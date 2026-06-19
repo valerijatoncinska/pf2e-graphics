@@ -1,0 +1,15 @@
+{
+	"spell:detect-poison": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.misc.detected.01"
+				]
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

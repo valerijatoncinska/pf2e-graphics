@@ -1,0 +1,39 @@
+{
+	"item:forced-mercy": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.boon.01.005.yellow"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.debuffs.restrained.01.02"
+						]
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

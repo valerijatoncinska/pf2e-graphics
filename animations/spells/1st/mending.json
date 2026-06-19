@@ -1,0 +1,37 @@
+{
+	"spell:mending": [
+		{
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"animated-spell-effects-cartoon.cantrips.mending.yellow"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 3
+				}
+			},
+			"label": "animation-section",
+			"triggers": [
+				"action"
+			]
+		},
+		{
+			"label": "sound-section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.crafting.magic.enchantment.craft.01"
+				]
+			}
+		}
+	]
+}

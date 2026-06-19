@@ -1,0 +1,37 @@
+{
+	"effect:aura-bless": [
+		{
+			"label": "Spell 1: Bless Aura (On Token)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.bless.200px.intro.yellow"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 2.5
+				},
+				"elevation": {
+					"sortLayer": "belowTokens"
+				}
+			}
+		},
+		{
+			"label": "Bless Sound",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.holy.bless.02"
+				]
+			}
+		}
+	]
+}

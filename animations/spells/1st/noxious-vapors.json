@@ -1,0 +1,50 @@
+{
+	"origin:item:slug:noxious-vapors": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.sleep.cloud.02.green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.5
+						},
+						"visibility": {
+							"opacity": 0.75
+						},
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/camp_skill_experimentalvapours.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

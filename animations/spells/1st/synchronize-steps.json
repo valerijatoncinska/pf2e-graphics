@@ -1,0 +1,17 @@
+{
+	"spell:synchronize-steps": [
+		{
+			"triggers": [
+				"action"
+			],
+			"label": "animation-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/Heroes/Crusader/camp_skill_stand_tall%20%7B17fd522d-71a1-446c-8d61-e8c718b6ee7d%7D.mp3"
+				],
+				"volume": 0.3
+			}
+		}
+	]
+}

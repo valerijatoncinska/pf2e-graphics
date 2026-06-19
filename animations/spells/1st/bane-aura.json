@@ -1,0 +1,37 @@
+{
+	"effect:aura-bane": [
+		{
+			"label": "Spell 1: Bane Aura (On Token)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.magic_signs.circle.02.conjuration.intro.dark_purple"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 3
+				},
+				"elevation": {
+					"sortLayer": "belowTokens"
+				}
+			}
+		},
+		{
+			"label": "Bane Sound",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.dark.fear.02"
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"spell:horizon-thunder-sphere": [
+		{
+			"triggers": [
+				"action"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.static_electricity.01.blue"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.lightning.sparking.01.01"
+						],
+						"duration": 2500,
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				}
+			]
+		}
+	]
+}

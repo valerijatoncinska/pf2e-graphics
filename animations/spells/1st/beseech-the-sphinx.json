@@ -1,0 +1,52 @@
+{
+	"effect:beseech-the-sphinx": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ward.star.yellow.02"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 3
+						},
+						"visibility": {
+							"opacity": 0.75
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic%20II/Air%20and%20Thunder/Wind%20Clearance%20004.ogg"
+						]
+					}
+				}
+			]
+		}
+	]
+}

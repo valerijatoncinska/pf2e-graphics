@@ -1,0 +1,34 @@
+{
+	"effect:conductive-weapon": [
+		{
+			"label": "trigger-section",
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"animated-spell-effects-cartoon.electricity.ball.01"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			},
+			"triggers": [
+				"effect"
+			]
+		},
+		{
+			"label": "sound-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.lightning.impact.burst.03.02"
+				]
+			}
+		}
+	]
+}

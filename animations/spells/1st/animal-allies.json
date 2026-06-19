@@ -1,0 +1,48 @@
+{
+	"origin:item:slug:animal-allies": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"modules/animated-spell-effects-cartoon/spell-effects/cartoon/level 01/fog_cloud_yellow_800x800.webm"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 2
+						},
+						"visibility": {
+							"opacity": 0.75
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.poison-swarm"
+						]
+					}
+				}
+			]
+		}
+	]
+}

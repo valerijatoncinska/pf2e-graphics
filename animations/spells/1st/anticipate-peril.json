@@ -1,0 +1,32 @@
+{
+	"effect:anticipate-peril": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 2
+				},
+				"graphic": [
+					"jb2a.zoning.directional.once.bluegreen.line200.02"
+				]
+			}
+		},
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"modules/pf2e-graphics/assets/assets/library/sounds/gamedev-market/Magic_Spells_Sound_Pack/General%20Magic/Cast_04.ogg"
+				]
+			}
+		}
+	]
+}

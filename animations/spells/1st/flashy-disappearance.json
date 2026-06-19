@@ -1,0 +1,39 @@
+{
+	"effect:flashy-disappearance": [
+		{
+			"triggers": [
+				"effect"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.on_token_buff.002.001.white"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.arcane.buff.02.02"
+						]
+					}
+				}
+			]
+		}
+	]
+}

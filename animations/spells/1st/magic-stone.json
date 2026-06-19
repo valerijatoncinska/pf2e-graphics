@@ -1,0 +1,47 @@
+{
+	"effect:magic-stone": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.celestial_bodies.asteroid.ring.ice.blue.01"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						},
+						"tieToDocuments": true,
+						"duration": 3300,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.earth.stoneskin.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

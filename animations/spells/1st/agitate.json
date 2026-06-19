@@ -1,0 +1,67 @@
+{
+	"item:agitate": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Effect",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.curse.01.006.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"delay": 1000
+					}
+				},
+				{
+					"label": "Failure",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Cove/char_en_fishsham_stress%20%7Bdb556923-2c22-4192-b3f1-688e9e0eee37%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				},
+				{
+					"label": "Success",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Cove/char_en_fishsham_stress_miss%20%7B429c82af-efdd-4caf-bd86-1a945e37b07e%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				}
+			],
+			"triggers": [
+				"saving-throw"
+			]
+		}
+	]
+}

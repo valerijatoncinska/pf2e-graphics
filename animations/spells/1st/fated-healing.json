@@ -1,0 +1,16 @@
+{
+	"spell:fated-healing": [
+		{
+			"triggers": [
+				"action"
+			],
+			"label": "animation-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.holy.bless.02.02"
+				]
+			}
+		}
+	]
+}

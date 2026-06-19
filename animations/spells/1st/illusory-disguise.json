@@ -1,0 +1,43 @@
+{
+	"illusory-disguise": [
+		{
+			"triggers": [
+				"toggle"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.toll_the_dead.grey.shockwave"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2.5
+						},
+						"elevation": {
+							"sortLayer": "belowTokens",
+							"zIndex": -1
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.debuffs.hypnotize.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

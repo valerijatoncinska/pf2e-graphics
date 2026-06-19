@@ -1,0 +1,16 @@
+{
+	"spell:lock": [
+		{
+			"label": "animation-section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.containers.lock.01"
+				]
+			}
+		}
+	]
+}

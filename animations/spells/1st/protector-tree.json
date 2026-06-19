@@ -1,0 +1,37 @@
+{
+	"spell:protector-tree": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.magic_signs.rune.conjuration.intro.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative"
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/TES/Oblivion/Spells/spl_conjuration_cast.wav"
+						]
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

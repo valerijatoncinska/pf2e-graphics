@@ -1,0 +1,46 @@
+{
+	"item:slug:befuddle": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.curse.01.003.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"duration": 2500,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.debuffs.slow.01.02"
+						]
+					}
+				}
+			]
+		}
+	]
+}

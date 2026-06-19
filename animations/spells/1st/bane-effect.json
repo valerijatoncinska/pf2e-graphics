@@ -1,0 +1,41 @@
+{
+	"effect:bane": [
+		{
+			"label": "Spell 1: Effect: Bane (On Token)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.icon.runes.yellow"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES",
+					"anchor": {
+						"x": 0.8,
+						"y": 0.2
+					}
+				},
+				"filters": [
+					{
+						"type": "ColorMatrix",
+						"options": {
+							"hue": -100
+						}
+					}
+				],
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES"
+				},
+				"persistent": "tokenPrototype",
+				"tieToDocuments": true,
+				"visibility": {
+					"opacity": 0.65
+				}
+			}
+		}
+	]
+}

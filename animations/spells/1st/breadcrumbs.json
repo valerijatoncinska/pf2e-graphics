@@ -1,0 +1,22 @@
+{
+	"spell:breadcrumbs": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.air.clear.wind.02"
+				],
+				"duration": 2000,
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

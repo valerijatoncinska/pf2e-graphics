@@ -1,0 +1,15 @@
+{
+	"spell:air-bubble": [
+		{
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.water.bubble.prison.01"
+				]
+			},
+			"triggers": [
+				"action"
+			]
+		}
+	]
+}

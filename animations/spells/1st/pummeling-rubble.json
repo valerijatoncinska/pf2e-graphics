@@ -1,0 +1,43 @@
+{
+	"origin:item:slug:pummeling-rubble": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.falling_rocks.side.1x1.grey"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.2
+							}
+						},
+						"size": {
+							"type": "relative"
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.earth.armor.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

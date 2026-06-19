@@ -1,0 +1,44 @@
+{
+	"origin:item:slug:gust-of-wind": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.gust_of_wind.default"
+						],
+						"size": {
+							"type": "relative",
+							"scaling": 0.5
+						},
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.air.clear.wind.03"
+						]
+					}
+				}
+			]
+		}
+	]
+}

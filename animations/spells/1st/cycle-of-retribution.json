@@ -1,0 +1,59 @@
+{
+	"item:cycle-of-retribution": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Effect",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.bless.200px.intro.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"label": "Failure",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.buff.generic.01"
+						]
+					},
+					"predicates": [
+						{
+							"not": "check:outcome:critical-success"
+						}
+					]
+				},
+				{
+					"label": "Success",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.fear.02.02"
+						]
+					},
+					"predicates": [
+						"check:outcome:critical-success"
+					]
+				}
+			],
+			"triggers": [
+				"saving-throw"
+			]
+		}
+	]
+}

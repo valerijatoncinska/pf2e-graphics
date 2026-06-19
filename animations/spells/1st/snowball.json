@@ -1,0 +1,55 @@
+{
+	"item:snowball": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.spell_projectile.ice_shard.blue"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.ice.ranged.strike.cast.snowball.01"
+						]
+					}
+				},
+				{
+					"label": "impact-sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.ice.ranged.strike.impact.snowball.01"
+						]
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					]
+				}
+			],
+			"triggers": [
+				"attack-roll"
+			]
+		}
+	]
+}

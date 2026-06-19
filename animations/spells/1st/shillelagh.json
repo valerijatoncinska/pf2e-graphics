@@ -1,0 +1,39 @@
+{
+	"effect:shillelagh": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.swirling_leaves.outburst.01.greenorange"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.misc.magical_girl.impact.02"
+						]
+					},
+					"label": "sound-section"
+				}
+			],
+			"triggers": [
+				"effect"
+			]
+		}
+	]
+}

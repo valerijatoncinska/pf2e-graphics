@@ -1,0 +1,52 @@
+{
+	"animationSets": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.entangle.02.complete.02.green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 2
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.spirit.01.01"
+						]
+					}
+				}
+			]
+		}
+	],
+	"rollOption": "origin:item:slug:flourishing-flora",
+	"id": "qgYT2GB8m7rJ89kM",
+	"name": "Spell 1: Flourishing Flora",
+	"source": "world"
+}

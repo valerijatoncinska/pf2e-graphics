@@ -1,0 +1,52 @@
+{
+	"origin:item:slug:grease": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.grease.dark_brown.loop"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative"
+						},
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"persistent": "tokenPrototype",
+						"tieToDocuments": true,
+						"rotation": {
+							"type": "absolute",
+							"angle": "random"
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.debuffs.grease"
+						]
+					}
+				}
+			]
+		}
+	]
+}

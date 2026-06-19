@@ -1,0 +1,40 @@
+{
+	"item:slug:elysian-whimsy": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.butterflies.inward_burst.01.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "Default Sound 2",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Cove/char_en_drownedpirate_offkilterjig%20%7B4c13f854-be3a-49e0-b25e-b2edba7339e9%7D.mp3"
+						],
+						"volume": 0.3
+					}
+				}
+			]
+		}
+	]
+}

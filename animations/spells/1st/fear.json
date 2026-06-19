@@ -1,0 +1,93 @@
+{
+	"item:slug:fear": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.cast_generic.01.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"elevation": {
+							"sortLayer": "belowTokens"
+						}
+					}
+				},
+				{
+					"label": "Failure",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					],
+					"contents": [
+						{
+							"label": "animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.icon.horror.purple"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 1.5
+								},
+								"visibility": {
+									"opacity": 0.85
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_howl%20%7B3f3e2b34-e5b3-46d6-83d0-99fed8f25ba1%7D.mp3"
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Monsters/Shared/char_en_ghoul_howl_miss%20%7Bbfed3788-810b-4457-a98a-e22fab93a231%7D.mp3"
+						]
+					}
+				}
+			],
+			"predicates": [
+				{
+					"or": [
+						"check:outcome:success",
+						"check:outcome:critical-success"
+					]
+				}
+			]
+		}
+	]
+}
