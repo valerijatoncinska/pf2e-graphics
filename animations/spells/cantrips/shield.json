@@ -1,4 +1,5 @@
-{	"effect:forbidding-ward": "effect:shield",
+{
+	"effect:forbidding-ward": "effect:shield",
 	"effect:shield": [
 		{
 			"predicates": [

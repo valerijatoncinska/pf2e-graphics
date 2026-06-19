@@ -1,9 +1,9 @@
 {
-	"item:slug:beak": "item:slug:jaws",	
-	"item:slug:horn": "item:slug:jaws",	
-	"item:slug:horns": "item:slug:jaws",	
-	"item:slug:jaw": "item:slug:jaws",	
-	"item:slug:wolf-jaws": "item:slug:jaws",	
+	"item:slug:beak": "item:slug:jaws",
+	"item:slug:horn": "item:slug:jaws",
+	"item:slug:horns": "item:slug:jaws",
+	"item:slug:jaw": "item:slug:jaws",
+	"item:slug:wolf-jaws": "item:slug:jaws",
 	"item:slug:jaws": [
 		{
 			"label": "trigger-block",
