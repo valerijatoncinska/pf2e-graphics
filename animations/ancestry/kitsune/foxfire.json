@@ -1,0 +1,101 @@
+{
+	"item:slug:foxfire": [
+		{
+			"label": "Trigger",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"graphic": [
+							"jb2a.magic_missile.{blue,green,yellow}"
+						],
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					},
+					"label": "Default Animation"
+				},
+				{
+					"label": "Success",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"contents": [
+						{
+							"execute": {
+								"type": "graphic",
+								"position": {
+									"type": "dynamic",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 3
+								},
+								"graphic": [
+									"jb2a.firework.01.{bluepink,green,yellow}"
+								],
+								"delay": 600
+							},
+							"label": "animation"
+						},
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_flashpowder_imp%20%7B27c6dc85-7dfa-4d4c-8adb-29edbce5db43%7D.mp3"
+								],
+								"volume": 0.3
+							},
+							"label": "sound"
+						}
+					]
+				},
+				{
+					"label": "Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_flashpowder_miss%20%7B94146d98-62e2-4c3f-a7ca-08cb469d0eb7%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				},
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_flashpowder%20%7Be7db70bf-2fa6-43fc-ae8a-ed6d9818352f%7D.mp3"
+						]
+					}
+				}
+			],
+			"overrides": [
+				"item:group"
+			]
+		}
+	]
+}

@@ -1,0 +1,118 @@
+{
+	"action:demoralize": [
+		{
+			"triggers": [
+				"skill-check"
+			],
+			"label": "trigger-section",
+			"contents": [
+				{
+					"contents": [
+						{
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Man%20At%20Arms/char_al_maa_bellow%20%7B92312c06-2659-4992-94cd-e4fd3c30e3c2%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						},
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.icon.fear.dark_purple"
+								],
+								"position": {
+									"type": "dynamic",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS"
+								}
+							},
+							"label": "animation-section"
+						},
+						{
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.ground_crack.purple.03"
+								],
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 3
+								},
+								"elevation": {
+									"sortLayer": "belowTokens"
+								}
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"label": "Success"
+				},
+				{
+					"label": "Failure",
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Man%20At%20Arms/char_al_maa_bellow_miss%20%7B77a26359-ff76-49bc-bdbf-909b0bc278c5%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						},
+						{
+							"label": "Animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.impact.ground_crack.purple.03"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 3
+								},
+								"visibility": {
+									"opacity": 0.8
+								},
+								"position": {
+									"type": "static",
+									"location": "SOURCES"
+								},
+								"elevation": {
+									"sortLayer": "belowTokens"
+								}
+							}
+						}
+					],
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:failure",
+								"check:outcome:critical-failure"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

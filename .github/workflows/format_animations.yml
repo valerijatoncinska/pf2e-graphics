@@ -3,7 +3,7 @@ name: Format animations
 on:
   push:
     branches:
-      - main
+      - v14-stopgap
     paths:
       - animations/**/*.json
 

@@ -29,7 +29,8 @@
 						"type": "sound",
 						"sound": [
 							"_SFX/__Darkest%20Dungeon/Heroes/Plague%20Doctor/camp_skill_preventativemedicine.mp3"
-						]
+						],
+						"volume": 0.3
 					},
 					"label": "sound-section"
 				}

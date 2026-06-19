@@ -1,0 +1,75 @@
+{
+	"check:outcome:critical-success": [
+		{
+			"label": "trigger-section-attack",
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "stress-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"__ASSETS/Icons/stress-effect.webp"
+						],
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.65
+						},
+						"delay": 500,
+						"duration": 1000,
+						"fadeIn": {
+							"duration": 300
+						},
+						"fadeOut": {
+							"duration": 300
+						},
+						"elevation": {
+							"zIndex": 10
+						},
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"missed": false
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/General/char_share_crit_hero%20%7B34c8997e-5cf6-436e-9217-ce737985920d%7D.mp3"
+						],
+						"delay": 500,
+						"volume": 0.3
+					}
+				},
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ui.critical.red.2"
+						],
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"delay": 500,
+						"elevation": {
+							"zIndex": 11
+						},
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						}
+					}
+				}
+			]
+		}
+	]
+}

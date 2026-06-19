@@ -1,3 +1,48 @@
 {
-	"action:dirty-trick": "action:surgical-shock"
+	"action:dirty-trick": [
+		{
+			"triggers": [
+				"skill-check"
+			],
+			"label": "triggers-section",
+			"contents": [
+				{
+					"label": "animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.sneak_attack.blue"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.smoke.puff.centered.blue"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.8
+						}
+					},
+					"label": "Smoke"
+				}
+			]
+		}
+	]
 }

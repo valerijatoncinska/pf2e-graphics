@@ -1,42 +1,61 @@
 {
 	"action:treat-wounds": [
 		{
+			"label": "trigger-block",
 			"triggers": [
 				"skill-check"
 			],
-			"predicates": [
-				{
-					"not": "check:outcome:failure"
-				}
-			],
-			"execute": {
-				"type": "graphic",
-				"graphic": [
-					"jb2a.healing_generic.400px.green"
-				],
-				"position": {
-					"type": "dynamic",
-					"location": "TARGETS"
-				},
-				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 1.5
-				}
-			},
 			"contents": [
 				{
-					"default": true
+					"label": "Successs",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"contents": [
+						{
+							"label": "Animation",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.condition.boon.01.006.green"
+								],
+								"position": {
+									"type": "dynamic",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 2
+								}
+							}
+						},
+						{
+							"label": "Sound",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/gamedev-market/Magic_Spells_Sound_Pack/General%20Magic/Heal_04.ogg"
+								]
+							}
+						}
+					],
+					"execute": {
+						"type": "graphic"
+					}
 				},
 				{
+					"label": "Crit Failure",
 					"predicates": [
 						"check:outcome:critical-failure"
 					],
 					"contents": [
 						{
-							"predicates": [
-								"jb2a:patreon"
-							],
 							"execute": {
 								"type": "graphic",
 								"graphic": [
@@ -44,42 +63,37 @@
 								],
 								"position": {
 									"type": "dynamic",
-									"location": "SOURCES"
+									"location": "TARGETS"
 								},
 								"size": {
 									"type": "relative",
-									"relativeTo": "SOURCES"
+									"relativeTo": "TARGETS",
+									"scaling": 2
 								}
-							}
+							},
+							"label": "Animation"
 						},
 						{
-							"predicates": [
-								"jb2a:free"
-							],
 							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.liquid.splash.blue"
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Hellion/sfx_bleed_01_heavy_sweetener%20%7B17319b4d-565f-4be6-9fa1-cd67b0d538a8%7D.mp3"
 								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								},
-								"filters": [
-									{
-										"type": "ColorMatrix",
-										"options": {
-											"hue": 145
-										}
-									}
-								]
-							}
+								"volume": 0.3
+							},
+							"label": "Sound"
 						}
 					]
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/General/camp_skill_bandage%20%7B0e9208b9-9ad1-4d2a-8c76-530c369431d9%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "Default Sound"
 				}
 			]
 		}

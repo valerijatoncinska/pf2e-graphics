@@ -1,0 +1,43 @@
+{
+	"action:repair": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "success-section",
+					"predicates": [
+						{
+							"or": [
+								"check:outcome:success",
+								"check:outcome:critical-success"
+							]
+						}
+					],
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/TES/Oblivion/ui_armorweapon_repair.ogg"
+						],
+						"volume": 0.5
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/TES/Oblivion/ui_armorweapon_repairbreak.ogg"
+						],
+						"volume": 0.5
+					},
+					"label": "failure-section",
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"triggers": [
+				"skill-check"
+			]
+		}
+	]
+}
