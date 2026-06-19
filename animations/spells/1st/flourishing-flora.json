@@ -1,5 +1,5 @@
 {
-	"animationSets": [
+	"flourishing-flora": [
 		{
 			"label": "trigger-section",
 			"triggers": [
@@ -44,9 +44,5 @@
 				}
 			]
 		}
-	],
-	"rollOption": "origin:item:slug:flourishing-flora",
-	"id": "qgYT2GB8m7rJ89kM",
-	"name": "Spell 1: Flourishing Flora",
-	"source": "world"
+	]
 }
