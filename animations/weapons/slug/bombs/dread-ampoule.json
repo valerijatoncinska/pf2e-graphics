@@ -1,0 +1,117 @@
+{
+	"item:slug:dread-ampoule-major": "item:dread-ampoule-lesser",
+	"item:slug:dread-ampoule-greater": "item:dread-ampoule-lesser",
+	"item:slug:dread-ampoule-moderate": "item:dread-ampoule-lesser",
+	"item:dread-ampoule-lesser": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.01.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"missed": false
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "success-block",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-failure"
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.misty_step.01.purple"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 4
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Dark/Dread%20Wave.ogg"
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "crit-fail-block",
+					"contents": [
+						{
+							"label": "flask-break",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.top_fracture.flask.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 4
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.break.01"
+								]
+							}
+						}
+					],
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"label": "trigger-section"
+		}
+	]
+}

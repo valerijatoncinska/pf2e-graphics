@@ -1,0 +1,125 @@
+{
+	"item:slug:bottled-lightning-major": "item:bottled-lightning-lesser",
+	"item:slug:bottled-lightning-greater": "item:bottled-lightning-lesser",
+	"item:slug:bottled-lightning-moderate": "item:bottled-lightning-lesser",
+	"item:bottled-lightning-lesser": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"graphic": [
+							"jb2a.throwable.throw.flask.01.purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"missed": false
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"filters": [
+							{
+								"type": "ColorMatrix",
+								"options": {
+									"hue": -100
+								}
+							}
+						],
+						"type": "graphic",
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "success-block",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-failure"
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.02.blue"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 4
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.lightning.01"
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "crit-fail-block",
+					"contents": [
+						{
+							"label": "flask-break",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.top_fracture.flask.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 4
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.break.01"
+								]
+							}
+						}
+					],
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"label": "trigger-section"
+		}
+	]
+}

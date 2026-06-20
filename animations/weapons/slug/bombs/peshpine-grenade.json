@@ -1,0 +1,117 @@
+{
+	"item:slug:peshpine-grenade-major": "item:peshpine-grenade-lesser",
+	"item:slug:peshpine-grenade-greater": "item:peshpine-grenade-lesser",
+	"item:slug:peshpine-grenade-moderate": "item:peshpine-grenade-lesser",
+	"item:peshpine-grenade-lesser": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.01.black"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"missed": false
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "success-block",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-failure"
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.template_circle.out_pulse.02.burst.greenorange"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 4
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Highwayman/char_share_imp_sword%20%7B5ed21b31-fd03-41fd-85e5-727aef54b0c1%7D.mp3"
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "crit-fail-block",
+					"contents": [
+						{
+							"label": "flask-break",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.top_fracture.flask.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 4
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.break.01"
+								]
+							}
+						}
+					],
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"label": "trigger-section"
+		}
+	]
+}

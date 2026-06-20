@@ -1,0 +1,59 @@
+{
+	"origin:item:slug:inner-radiance-torrent": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.ranged.beam.001.01.orange"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.2
+							}
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.arcane.cast.02.02"
+						]
+					}
+				},
+				{
+					"label": "sound-section-2",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.lightning.loop.lightning.cast.01.01"
+						],
+						"fadeOut": {
+							"duration": 500
+						},
+						"fadeIn": {
+							"duration": 500
+						},
+						"duration": 2000,
+						"delay": 700
+					}
+				}
+			]
+		}
+	]
+}

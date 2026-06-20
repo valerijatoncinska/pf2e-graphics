@@ -1,0 +1,84 @@
+{
+	"effect:albatross-curse": [
+		{
+			"label": "on-section",
+			"triggers": [
+				"toggle"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.condition.boon.02.003.refraction"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.nature.buff.bird-flight"
+						],
+						"volume": 0.6
+					}
+				}
+			],
+			"predicates": [
+				{
+					"not": "toggle:delete"
+				}
+			]
+		},
+		{
+			"label": "off-section",
+			"predicates": [
+				"toggle:delete"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.swirling_feathers.outburst.01.blue"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.crafting.machinery.air_press.01.01"
+						],
+						"volume": 0.6
+					}
+				}
+			],
+			"triggers": [
+				"toggle"
+			]
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"effect:blazing-armory": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"effect"
+			],
+			"contents": [
+				{
+					"label": "border-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.token_border.circle.static.dark_red.004"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"zIndex": 1
+						}
+					}
+				},
+				{
+					"label": "rune-animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.icon.runes02.red"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES",
+							"offset": {
+								"y": 5
+							}
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"elevation": {
+							"zIndex": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.buff.weapon.fire.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

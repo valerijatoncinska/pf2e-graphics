@@ -1,0 +1,68 @@
+{
+	"effect:raise-a-shield": [
+		{
+			"label": "Raise a shield INTRO",
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.condition.boon.01.010.yellow"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 2
+				}
+			},
+			"triggers": [
+				"effect"
+			]
+		},
+		{
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.markers.shield_rampart.loop.01.orange"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"persistent": "tokenPrototype",
+				"tieToDocuments": true,
+				"delay": 2000,
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"fadeIn": {
+					"duration": 500
+				},
+				"fadeOut": {
+					"duration": 500
+				}
+			},
+			"label": "Raise a shield PERSISTENT",
+			"triggers": [
+				"effect"
+			]
+		},
+		{
+			"label": "Raise a shield SOUND",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"_SFX/__Darkest%20Dungeon/General/camp_skills_marchplan%20%7Be2c45ef9-5662-4405-958d-0f7a994768fc%7D.mp3"
+				],
+				"volume": 0.3
+			},
+			"triggers": [
+				"effect"
+			]
+		}
+	]
+}

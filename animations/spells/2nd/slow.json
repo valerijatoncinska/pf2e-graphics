@@ -1,0 +1,46 @@
+{
+	"item:slug:slow": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"label": "animation-section-above",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.template_circle.vortex.loop.dark_black"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						},
+						"duration": 3000,
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.misc.suspense"
+						]
+					},
+					"label": "sound-section"
+				}
+			]
+		}
+	]
+}

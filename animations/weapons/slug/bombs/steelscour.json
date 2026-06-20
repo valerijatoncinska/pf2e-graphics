@@ -1,0 +1,6 @@
+{
+	"item:steelscour-lesser": "item:acid-flask-lesser",
+	"item:steelscour-moderate": "item:acid-flask-lesser",
+	"item:steelscour-greater": "item:acid-flask-lesser",
+	"item:steelscour-major": "item:acid-flask-lesser"
+}

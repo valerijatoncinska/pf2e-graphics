@@ -1,0 +1,27 @@
+{
+	"effect:goo-grenade": [
+		{
+			"label": "Bomb Effect: Goo Grenade (On Token)",
+			"triggers": [
+				"effect"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.liquid.blob.blue"
+				],
+				"position": {
+					"type": "dynamic",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"persistent": "tokenPrototype",
+				"tieToDocuments": true
+			}
+		}
+	]
+}

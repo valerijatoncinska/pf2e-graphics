@@ -1,0 +1,78 @@
+{
+	"spell:coiling-dance": [
+		{
+			"triggers": [
+				"action"
+			],
+			"label": "coling-dance-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.markers.simple.001.complete.002.green"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						},
+						"elevation": {
+							"zIndex": -1
+						}
+					}
+				},
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.eyes.01.single.orangeyellow"
+						],
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 1.5
+						},
+						"elevation": {
+							"zIndex": 2
+						},
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Shieldbreaker/camp_skill_wayscales%20%7B674fc869-3c20-42c7-916c-270911da7cfe%7D.mp3"
+						],
+						"volume": 0.3
+					},
+					"label": "sound-section-1"
+				},
+				{
+					"label": "sound-section-2",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Shieldbreaker/camp_skill_wayadder%20%7B9302c95b-f1c6-43d8-94d7-1bc1ba07390e%7D.mp3"
+						],
+						"volume": 0.3,
+						"delay": 1000,
+						"fadeIn": {
+							"duration": 600
+						}
+					}
+				}
+			]
+		}
+	]
+}

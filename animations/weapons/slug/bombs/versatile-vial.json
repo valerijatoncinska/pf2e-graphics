@@ -1,0 +1,308 @@
+{
+	"item:versatile-vial": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						]
+					}
+				},
+				{
+					"label": "Throw Acid Flask",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.03.green"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"waitUntilFinished": -500
+					},
+					"predicates": [
+						"item:trait:acid"
+					]
+				},
+				{
+					"label": "Throw Fire Flask",
+					"predicates": [
+						"item:trait:fire"
+					],
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.03.red"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "Throw Cold Flask",
+					"predicates": [
+						"item:trait:cold"
+					],
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.03.red"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"filters": [
+							{
+								"type": "ColorMatrix",
+								"options": {
+									"hue": -179
+								}
+							}
+						],
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "Throw Electricity Flask",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.03.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"filters": [
+							{
+								"type": "ColorMatrix",
+								"options": {
+									"hue": -179
+								}
+							}
+						],
+						"waitUntilFinished": -500
+					},
+					"predicates": [
+						"item:trait:electricity"
+					]
+				},
+				{
+					"label": "success-block",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-failure"
+						}
+					],
+					"contents": [
+						{
+							"label": "fire-damage",
+							"contents": [
+								{
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.explosion.08.orange"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS",
+											"randomOffset": 0.5
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS",
+											"scaling": 4
+										}
+									},
+									"label": "animation-section"
+								},
+								{
+									"label": "sound-section",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"graphics-sfx.potion.bomb.fire.01"
+										]
+									}
+								}
+							],
+							"predicates": [
+								"item:trait:fire"
+							]
+						},
+						{
+							"label": "cold-damage",
+							"contents": [
+								{
+									"label": "animation-section",
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.explosion.05.bluewhite"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS"
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS",
+											"scaling": 4
+										}
+									}
+								},
+								{
+									"label": "sound-section",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"graphics-sfx.potion.bomb.ice.01"
+										]
+									}
+								}
+							],
+							"predicates": [
+								"item:trait:cold"
+							]
+						},
+						{
+							"label": "electricity-damage",
+							"predicates": [
+								"item:trait:electricity"
+							],
+							"contents": [
+								{
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.explosion.02.blue"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS"
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "TARGETS",
+											"scaling": 4
+										}
+									},
+									"label": "animation-section"
+								},
+								{
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"graphics-sfx.potion.bomb.lightning.01"
+										]
+									},
+									"label": "sound-section"
+								}
+							]
+						},
+						{
+							"label": "acid-damage",
+							"predicates": [
+								"item:trait:acid"
+							],
+							"contents": [
+								{
+									"label": "animation-section",
+									"execute": {
+										"type": "graphic",
+										"graphic": [
+											"jb2a.misty_step.01.green"
+										],
+										"position": {
+											"type": "static",
+											"location": "TARGETS"
+										},
+										"size": {
+											"type": "relative",
+											"relativeTo": "SOURCES",
+											"scaling": 4
+										}
+									}
+								},
+								{
+									"label": "sound-section",
+									"execute": {
+										"type": "sound",
+										"sound": [
+											"graphics-sfx.potion.bomb.acid.01"
+										],
+										"delay": 1500
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"label": "crit-fail-block",
+					"contents": [
+						{
+							"label": "flask-break",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.top_fracture.flask.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS"
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 4
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.break.01"
+								]
+							}
+						}
+					],
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"label": "trigger-section"
+		}
+	]
+}

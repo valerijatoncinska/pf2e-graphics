@@ -1,0 +1,16 @@
+{
+	"spell:enlarge": [
+		{
+			"label": "animation-section",
+			"triggers": [
+				"action"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.arcane.buff.03.03"
+				]
+			}
+		}
+	]
+}

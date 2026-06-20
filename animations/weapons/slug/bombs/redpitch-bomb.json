@@ -1,0 +1,6 @@
+{
+	"item:slug:redpitch-bomb-major": "item:redpitch-bomb-lesser",
+	"item:slug:redpitch-bomb-greater": "item:redpitch-bomb-lesser",
+	"item:slug:redpitch-bomb-moderate": "item:redpitch-bomb-lesser",
+	"item:redpitch-bomb-lesser": "item:alchemists-fire-lesser"
+}

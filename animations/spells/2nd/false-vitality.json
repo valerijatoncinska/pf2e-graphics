@@ -1,23 +1,26 @@
 {
-	"origin:item:slug:sound-burst": [
+	"effect:false-vitality": [
 		{
+			"label": "trigger-section",
 			"triggers": [
-				"place-template"
+				"effect"
 			],
 			"contents": [
 				{
+					"label": "animation-section",
 					"execute": {
 						"type": "graphic",
 						"graphic": [
-							"jb2a.impact.sound.01.pinkteal"
+							"jb2a.cast_shape.circle.01.purple"
 						],
 						"position": {
-							"type": "static",
-							"location": "TEMPLATES"
+							"type": "dynamic",
+							"location": "SOURCES"
 						},
 						"size": {
 							"type": "relative",
-							"scaling": 1.5
+							"relativeTo": "SOURCES",
+							"scaling": 2
 						}
 					}
 				},
@@ -26,7 +29,7 @@
 					"execute": {
 						"type": "sound",
 						"sound": [
-							"graphics-sfx.magic.earth.ward.01"
+							"graphics-sfx.magic.dark.bells.01.02"
 						]
 					}
 				}

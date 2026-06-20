@@ -1,0 +1,117 @@
+{
+	"item:slug:glue-bomb-major": "item:glue-bomb-lesser",
+	"item:slug:glue-bomb-greater": "item:glue-bomb-lesser",
+	"item:slug:glue-bomb-moderate": "item:glue-bomb-lesser",
+	"item:glue-bomb-lesser": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.flask.01.black"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"missed": false
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "success-block",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-failure"
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.liquid.splash.grey"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 4
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Monsters/Warrens/char_en_swinewretch_vomit%20%7Bd81f8b39-e176-4db6-b0b6-183fa8870a4e%7D.mp3"
+								]
+							}
+						}
+					]
+				},
+				{
+					"label": "crit-fail-block",
+					"contents": [
+						{
+							"label": "flask-break",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.explosion.top_fracture.flask.01"
+								],
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								},
+								"size": {
+									"type": "relative",
+									"relativeTo": "SOURCES",
+									"scaling": 4
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"graphics-sfx.potion.bomb.break.01"
+								]
+							}
+						}
+					],
+					"predicates": [
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"label": "trigger-section"
+		}
+	]
+}

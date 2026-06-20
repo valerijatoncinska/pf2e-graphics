@@ -1,0 +1,13 @@
+{
+	"spell:dispel-magic": [
+		{
+			"label": "dispel-magic-section",
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.ice.dispel.magic.02"
+				]
+			}
+		}
+	]
+}

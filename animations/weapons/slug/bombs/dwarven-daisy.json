@@ -1,0 +1,80 @@
+{
+	"item:dwarven-daisy-moderate": "item:dwarven-daisy-lesser",
+	"item:dwarven-daisy-lesser": [
+		{
+			"triggers": [
+				"attack-roll"
+			],
+			"contents": [
+				{
+					"label": "Default Sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.generic.throw"
+						]
+					}
+				},
+				{
+					"label": "Default Animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.throwable.throw.dynamite.01.orange"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES",
+							"missed": false
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						},
+						"waitUntilFinished": -500
+					}
+				},
+				{
+					"label": "success-block",
+					"predicates": [
+						{
+							"not": "check:outcome:critical-failure"
+						}
+					],
+					"contents": [
+						{
+							"label": "animation-section",
+							"execute": {
+								"type": "graphic",
+								"graphic": [
+									"jb2a.firework.01"
+								],
+								"size": {
+									"type": "relative",
+									"relativeTo": "TARGETS",
+									"scaling": 4
+								},
+								"position": {
+									"type": "static",
+									"location": "TARGETS",
+									"missed": false
+								}
+							}
+						},
+						{
+							"label": "sound-section",
+							"execute": {
+								"type": "sound",
+								"sound": [
+									"_SFX/__Darkest%20Dungeon/Heroes/Antiquarian/char_al_antq_flashpowder_imp%20%7B27c6dc85-7dfa-4d4c-8adb-29edbce5db43%7D.mp3"
+								],
+								"volume": 0.3
+							}
+						}
+					]
+				}
+			],
+			"label": "trigger-section"
+		}
+	]
+}
