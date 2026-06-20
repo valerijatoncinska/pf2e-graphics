@@ -1,4 +1,5 @@
-{	"spell:know-the-way": "spell:glowing-trail",
+{
+	"spell:know-the-way": "spell:glowing-trail",
 	"spell:illuminate": "spell:glowing-trail",
 	"spell:glowing-trail": [
 		{
