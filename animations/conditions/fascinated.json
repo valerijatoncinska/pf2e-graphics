@@ -1,5 +1,5 @@
 {
-	"animationSets": [
+	"condition:fascinated": [
 		{
 			"label": "animation-section",
 			"triggers": [
@@ -28,9 +28,5 @@
 				}
 			}
 		}
-	],
-	"rollOption": "condition:fascinated",
-	"id": "EIgxd1x3uXSTgboE",
-	"name": "Condition: Fascinated",
-	"source": "world"
+	]
 }
