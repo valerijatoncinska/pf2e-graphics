@@ -1,5 +1,5 @@
-{    
-    "item:slug:frost-vial-major": "item:frost-vial-lesser",
+{
+	"item:slug:frost-vial-major": "item:frost-vial-lesser",
 	"item:slug:frost-vial-greater": "item:frost-vial-lesser",
 	"item:slug:frost-vial-moderate": "item:frost-vial-lesser",
 	"item:frost-vial-lesser": [

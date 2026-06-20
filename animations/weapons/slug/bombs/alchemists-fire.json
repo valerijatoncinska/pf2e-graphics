@@ -1,5 +1,5 @@
 {
-    "item:slug:alchemists-fire-major": "item:alchemists-fire-lesser",
+	"item:slug:alchemists-fire-major": "item:alchemists-fire-lesser",
 	"item:slug:alchemists-fire-greater": "item:alchemists-fire-lesser",
 	"item:slug:alchemists-fire-moderate": "item:alchemists-fire-lesser",
 	"item:alchemists-fire-lesser": [
