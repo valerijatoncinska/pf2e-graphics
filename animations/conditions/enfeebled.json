@@ -1,23 +1,24 @@
 {
-	"condition:blinded": [
+	"condition:enfeebled": [
 		{
-			"label": "on token",
+			"label": "animation-section",
 			"triggers": [
-				"effect"
+				"effect",
+				"start-turn"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.condition.curse.01.020.red"
+					"jb2a.condition.curse.01.004.purple"
 				],
 				"position": {
-					"type": "dynamic",
+					"type": "static",
 					"location": "SOURCES"
 				},
 				"size": {
 					"type": "relative",
 					"relativeTo": "SOURCES",
-					"scaling": 2
+					"scaling": 1.5
 				}
 			}
 		}

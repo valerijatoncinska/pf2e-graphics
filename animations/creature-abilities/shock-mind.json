@@ -1,0 +1,37 @@
+{
+	"item:slug:shock-mind": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"saving-throw"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.shield_themed.below.eldritch_web.01.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.shatter.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

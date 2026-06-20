@@ -1,15 +1,11 @@
 {
-	"condition:fleeing": [
+	"condition:quickened": [
 		{
 			"label": "animation-section",
-			"triggers": [
-				"effect",
-				"start-turn"
-			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.icon.horror.purple"
+					"jb2a.on_token_buff.002.003.blue"
 				],
 				"position": {
 					"type": "static",
@@ -18,16 +14,16 @@
 				"size": {
 					"type": "relative",
 					"relativeTo": "SOURCES",
-					"scaling": 1.5
+					"scaling": 2
 				},
-				"fadeOut": {
-					"duration": 700
-				},
-				"fadeIn": {
-					"duration": 700
-				},
-				"duration": 2000
-			}
+				"elevation": {
+					"sortLayer": "belowTokens"
+				}
+			},
+			"triggers": [
+				"effect",
+				"start-turn"
+			]
 		}
 	]
 }

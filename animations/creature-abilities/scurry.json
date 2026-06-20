@@ -1,0 +1,40 @@
+{
+	"action:scurry": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"animated-spell-effects-cartoon.smoke.05"
+						],
+						"position": {
+							"type": "dynamic",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-creature-sounds/assets/sounds/GameDevMarket/Khron_Monster_Library/Spider/Spider_Attack/CREAInsc_Spider_Attack_05.m4a"
+						],
+						"volume": 0.5
+					}
+				}
+			]
+		}
+	]
+}

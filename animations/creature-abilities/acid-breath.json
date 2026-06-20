@@ -1,0 +1,40 @@
+{
+	"origin:item:slug:acid-breath": [
+		{
+			"label": "trigger-section",
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.breath_weapons02.burst.line.fire.green.01"
+						],
+						"position": {
+							"type": "static",
+							"location": "TEMPLATES",
+							"anchor": {
+								"x": 0.1
+							}
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 0.7
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.potion.bomb.acid.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

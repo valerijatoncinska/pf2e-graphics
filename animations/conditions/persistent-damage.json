@@ -1,17 +1,21 @@
 {
-	"item:slug:persistent-damage": [
+	"condition:persistent-damage": [
 		{
+			"label": "Acid (Effect)",
 			"triggers": [
-				"damage-taken",
-				"toggle"
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:acid"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.shield.01.complete.01"
+					"jb2a.liquid.splash.bright_green"
 				],
 				"position": {
-					"type": "dynamic",
+					"type": "static",
 					"location": "SOURCES"
 				},
 				"size": {
@@ -19,541 +23,620 @@
 					"relativeTo": "SOURCES",
 					"scaling": 1.5
 				}
-			},
-			"contents": [
-				{
-					"predicates": [
-						"item:damage:type:acid"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.liquid.splash.green"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.liquid.splash.blue"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								},
-								"filters": [
-									{
-										"type": "ColorMatrix",
-										"options": {
-											"hue": -100
-										}
-									}
-								]
-							}
-						}
-					]
+			}
+		},
+		{
+			"label": "Acid (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:acid"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.water.spray"
+				]
+			}
+		},
+		{
+			"label": "Bleed (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:bleed"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.liquid.splash.red"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
 				},
-				{
-					"predicates": [
-						"item:damage:type:bleed"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.liquid.splash.red"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.liquid.splash.blue"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								},
-								"filters": [
-									{
-										"type": "ColorMatrix",
-										"options": {
-											"hue": 145
-										}
-									}
-								]
-							}
-						}
-					]
-				},
-				{
-					"predicates": [
-						"item:damage:type:bludgeoning"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.impact.ground_crack.orange.01"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						}
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:cold"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.impact_themed.ice_shard.blue"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						}
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:electricity"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.impact.012.blue"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						}
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:fire"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.shield_themed.below.fire.01.orange"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						},
-						"fadeIn": {
-							"duration": 500
-						},
-						"fadeOut": {
-							"duration": 250
-						},
-						"duration": 2400
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:force"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.cast_shape.circle.single01.blue"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						}
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:mental"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.template_circle.out_pulse.02.burst.bluewhite"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						},
-						"filters": [
-							{
-								"type": "ColorMatrix",
-								"options": {
-									"saturate": 0.8,
-									"hue": 20
-								}
-							}
-						]
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:piercing"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.spike_trap.10x10ft.top.no_base.normal.01"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.spike_trap.10x10ft.top.holes.normal.01.01"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						}
-					]
-				},
-				{
-					"predicates": [
-						"item:damage:type:poison"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.sleep.cloud.02.green"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.sleep.cloud.02.pink"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								},
-								"filters": [
-									{
-										"type": "ColorMatrix",
-										"options": {
-											"hue": 180
-										}
-									}
-								]
-							}
-						}
-					]
-				},
-				{
-					"predicates": [
-						"item:damage:type:slashing"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.claws.400px.bright_orange"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.claws.400px.red"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						}
-					]
-				},
-				{
-					"predicates": [
-						"item:damage:type:sonic"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.soundwave.02.blue"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						},
-						"delay": 800,
-						"filters": [
-							{
-								"type": "ColorMatrix",
-								"options": {
-									"hue": -50
-								}
-							}
-						]
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:spirit"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.spirit_guardians.blue.no_ring"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.spirit_guardians.blueyellow.ring"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								},
-								"filters": [
-									{
-										"type": "ColorMatrix",
-										"options": {
-											"hue": 155
-										}
-									}
-								]
-							}
-						}
-					]
-				},
-				{
-					"predicates": [
-						"item:damage:type:vitality"
-					],
-					"execute": {
-						"type": "graphic",
-						"graphic": [
-							"jb2a.divine_smite.caster.reversed.blueyellow"
-						],
-						"position": {
-							"type": "dynamic",
-							"location": "SOURCES"
-						},
-						"size": {
-							"type": "relative",
-							"relativeTo": "SOURCES"
-						}
-					}
-				},
-				{
-					"predicates": [
-						"item:damage:type:void"
-					],
-					"contents": [
-						{
-							"predicates": [
-								"jb2a:patreon"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.divine_smite.caster.reversed.dark_purple"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								}
-							}
-						},
-						{
-							"predicates": [
-								"jb2a:free"
-							],
-							"execute": {
-								"type": "graphic",
-								"graphic": [
-									"jb2a.divine_smite.caster.reversed.blueyellow"
-								],
-								"position": {
-									"type": "dynamic",
-									"location": "SOURCES"
-								},
-								"size": {
-									"type": "relative",
-									"relativeTo": "SOURCES"
-								},
-								"filters": [
-									{
-										"type": "ColorMatrix",
-										"options": {
-											"hue": -165
-										}
-									}
-								]
-							}
-						}
-					]
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
 				}
-			]
+			}
+		},
+		{
+			"label": "Bleed (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:bleed"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.sword.melee.slice"
+				]
+			}
+		},
+		{
+			"label": "Bludgeoning (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:bludgeoning"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.impact.ground_crack.orange.01"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Bludgeoning (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:bludgeoning"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.generic.hit.blunt.03"
+				]
+			}
+		},
+		{
+			"label": "Cold (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:cold"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.impact_themed.ice_shard.blue"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Cold (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:cold"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.ice.cast.02"
+				]
+			}
+		},
+		{
+			"label": "Electricity (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:electricity"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.impact.012.blue"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Electricity (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:electricity"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.lightning.impact.burst"
+				]
+			}
+		},
+		{
+			"label": "Fire (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:fire"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.shield_themed.below.fire.01.orange"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Fire (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:fire"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.fire.cast.single.04.small"
+				]
+			}
+		},
+		{
+			"label": "Force (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:force"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.cast_shape.circle.single01.blue"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Force (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:force"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.arcane.cast.03"
+				]
+			}
+		},
+		{
+			"label": "Mental (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:mental"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.template_circle.out_pulse.02.burst.bluewhite"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"filters": [
+					{
+						"type": "ColorMatrix",
+						"options": {
+							"hue": 20,
+							"saturate": 0.8
+						}
+					}
+				]
+			}
+		},
+		{
+			"label": "Mental (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:mental"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.dark.curse.02"
+				]
+			}
+		},
+		{
+			"label": "Piercing (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:piercing"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.spike_trap.10x10ft.top.no_base.normal.01"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"elevation": {
+					"sortLayer": "belowTokens"
+				}
+			}
+		},
+		{
+			"label": "Piercing (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:piercing"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.sword.melee.impale"
+				]
+			}
+		},
+		{
+			"label": "Poison (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:poison"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.sleep.cloud.02.green"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"visibility": {
+					"opacity": 0.7
+				}
+			}
+		},
+		{
+			"label": "Poison (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:poison"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.air.gust.01"
+				]
+			}
+		},
+		{
+			"label": "Slashing (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:slashing"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.claws.400px.bright_orange"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Slashing (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:slashing"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.sword.melee.swing"
+				]
+			}
+		},
+		{
+			"label": "Sonic (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:sonic"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.soundwave.02.blue"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				},
+				"filters": [
+					{
+						"type": "ColorMatrix",
+						"options": {
+							"hue": -50
+						}
+					}
+				]
+			}
+		},
+		{
+			"label": "Sonic (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:sonic"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.dark.wave.02"
+				]
+			}
+		},
+		{
+			"label": "Spirit (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:spirit"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.spirit_guardians.blue.no_ring"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Spirit (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:spirit"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.arcane.buff.01"
+				]
+			}
+		},
+		{
+			"label": "Vitality (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:vitality"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.divine_smite.caster.reversed.blueyellow"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 2.4
+				}
+			}
+		},
+		{
+			"label": "Vitality (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:vitality"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.holy.attack.bell"
+				]
+			}
+		},
+		{
+			"label": "Void (Effect)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:void"
+			],
+			"execute": {
+				"type": "graphic",
+				"graphic": [
+					"jb2a.divine_smite.caster.reversed.dark_purple"
+				],
+				"position": {
+					"type": "static",
+					"location": "SOURCES"
+				},
+				"size": {
+					"type": "relative",
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
+				}
+			}
+		},
+		{
+			"label": "Void (SFX)",
+			"triggers": [
+				"effect",
+				"damage-roll"
+			],
+			"predicates": [
+				"condition:damage:type:void"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.dark.curse.04"
+				]
+			}
 		}
 	]
 }

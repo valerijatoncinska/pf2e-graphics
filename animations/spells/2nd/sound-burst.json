@@ -1,0 +1,41 @@
+{
+	"animationSets": [
+		{
+			"triggers": [
+				"place-template"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.impact.sound.01.pinkteal"
+						],
+						"position": {
+							"type": "static",
+							"location": "TEMPLATES"
+						},
+						"size": {
+							"type": "relative",
+							"scaling": 1.5
+						}
+					}
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.earth.ward.01"
+						]
+					}
+				}
+			]
+		}
+	],
+	"rollOption": "origin:item:slug:sound-burst",
+	"source": "world",
+	"module": "pf2e-graphics",
+	"name": "Spell 2: Sound Burst",
+	"id": "bon7PwCcwl8oGkiU"
+}

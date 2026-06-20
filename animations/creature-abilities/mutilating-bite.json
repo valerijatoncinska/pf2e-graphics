@@ -1,0 +1,53 @@
+{
+	"item:slug:mutilating-bite": [
+		{
+			"label": "fail-section",
+			"predicates": [
+				{
+					"or": [
+						"check:outcome:failure",
+						"check:outcome:critical-failure"
+					]
+				}
+			],
+			"contents": [
+				{
+					"label": "fail-animation",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.liquid.splash02.red"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 2
+						},
+						"elevation": {
+							"zIndex": 2
+						},
+						"delay": 600
+					}
+				},
+				{
+					"label": "fail-sound",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"_SFX/__Darkest%20Dungeon/Heroes/Hellion/sfx_bleed_01_heavy_sweetener%20%7B17319b4d-565f-4be6-9fa1-cd67b0d538a8%7D.mp3"
+						],
+						"volume": 0.3,
+						"delay": 600
+					}
+				}
+			],
+			"triggers": [
+				"saving-throw"
+			]
+		}
+	]
+}

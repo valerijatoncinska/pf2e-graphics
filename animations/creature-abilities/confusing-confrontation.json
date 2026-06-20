@@ -1,0 +1,46 @@
+{
+	"item:slug:confusing-confrontation": [
+		{
+			"triggers": [
+				"saving-throw"
+			],
+			"label": "trigger-block",
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.icon.horror.dark_teal"
+						],
+						"position": {
+							"type": "static",
+							"location": "TARGETS"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "TARGETS",
+							"scaling": 1.5
+						},
+						"fadeIn": {
+							"duration": 500
+						},
+						"fadeOut": {
+							"duration": 500
+						},
+						"duration": 6000
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.curse.07.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

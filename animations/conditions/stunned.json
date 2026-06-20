@@ -1,14 +1,15 @@
 {
-	"condition:blinded": [
+	"condition:stunned": [
 		{
-			"label": "on token",
+			"label": "Stunned (On Token)",
 			"triggers": [
-				"effect"
+				"effect",
+				"start-turn"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.condition.curse.01.020.red"
+					"jb2a.dizzy_stars.200px.yellow"
 				],
 				"position": {
 					"type": "dynamic",
@@ -17,7 +18,7 @@
 				"size": {
 					"type": "relative",
 					"relativeTo": "SOURCES",
-					"scaling": 2
+					"scaling": 1.5
 				}
 			}
 		}

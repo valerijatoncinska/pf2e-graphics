@@ -1,17 +1,17 @@
 {
-	"condition:blinded": [
+	"condition:doomed": [
 		{
-			"label": "on token",
+			"label": "animation-section",
 			"triggers": [
 				"effect"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.condition.curse.01.020.red"
+					"jb2a.condition.curse.01.023.red"
 				],
 				"position": {
-					"type": "dynamic",
+					"type": "static",
 					"location": "SOURCES"
 				},
 				"size": {

@@ -1,29 +1,27 @@
 {
-	"condition:immobilized": [
+	"origin:item:slug:shed-darkness": [
 		{
-			"label": "on token",
+			"label": "animation-section",
 			"triggers": [
-				"effect"
+				"place-template"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.markers.chain.standard.loop.01.grey"
+					"jb2a.darkness.black"
 				],
 				"position": {
 					"type": "dynamic",
-					"location": "SOURCES"
+					"location": "TEMPLATES"
 				},
 				"size": {
-					"type": "relative",
-					"relativeTo": "SOURCES",
-					"scaling": 2
+					"type": "relative"
 				},
 				"fadeIn": {
-					"duration": 300
+					"duration": 500
 				},
 				"fadeOut": {
-					"duration": 300
+					"duration": 500
 				},
 				"persistent": "tokenPrototype",
 				"tieToDocuments": true

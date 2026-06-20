@@ -1,5 +1,5 @@
 {
-	"condition:immobilized": [
+	"condition:concealed": [
 		{
 			"label": "on token",
 			"triggers": [
@@ -8,7 +8,7 @@
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.markers.chain.standard.loop.01.grey"
+					"jb2a.markers.smoke.ring.loop.bluepurple"
 				],
 				"position": {
 					"type": "dynamic",
@@ -17,13 +17,13 @@
 				"size": {
 					"type": "relative",
 					"relativeTo": "SOURCES",
-					"scaling": 2
+					"scaling": 1.5
 				},
 				"fadeIn": {
-					"duration": 300
+					"duration": 500
 				},
 				"fadeOut": {
-					"duration": 300
+					"duration": 500
 				},
 				"persistent": "tokenPrototype",
 				"tieToDocuments": true

@@ -1,18 +1,23 @@
 {
-	"condition:dazzled": [
+	"condition:stupefied": [
 		{
-			"label": "on token",
+			"label": "animation",
 			"triggers": [
-				"effect"
+				"effect",
+				"start-turn"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.glint.yellow.many"
+					"jb2a.icon.stun.purple"
 				],
 				"position": {
-					"type": "dynamic",
-					"location": "SOURCES"
+					"type": "static",
+					"location": "SOURCES",
+					"anchor": {
+						"x": 0.8,
+						"y": 0.7
+					}
 				},
 				"size": {
 					"type": "relative",
@@ -24,8 +29,7 @@
 				"fadeOut": {
 					"duration": 500
 				},
-				"persistent": "tokenPrototype",
-				"tieToDocuments": true
+				"duration": 2500
 			}
 		}
 	]

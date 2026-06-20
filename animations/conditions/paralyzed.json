@@ -1,13 +1,9 @@
 {
 	"condition:paralyzed": [
 		{
-			"predicates": [
-				{
-					"gte": [
-						"settings:quality",
-						1
-					]
-				}
+			"label": "Condition: Paralysed",
+			"triggers": [
+				"effect"
 			],
 			"execute": {
 				"type": "graphic",
@@ -15,42 +11,17 @@
 					"jb2a.static_electricity.03.blue"
 				],
 				"position": {
-					"type": "dynamic",
+					"type": "static",
 					"location": "SOURCES"
 				},
 				"size": {
 					"type": "relative",
-					"relativeTo": "SOURCES"
+					"relativeTo": "SOURCES",
+					"scaling": 1.5
 				},
-				"fadeIn": {
-					"duration": 250
-				},
-				"fadeOut": {
-					"duration": 500
-				}
-			},
-			"contents": [
-				{
-					"triggers": [
-						"start-turn",
-						"effect"
-					],
-					"default": true
-				},
-				{
-					"triggers": [
-						"effect"
-					],
-					"predicates": [
-						"settings:persistent"
-					],
-					"execute": {
-						"type": "graphic",
-						"tieToDocuments": true,
-						"persistent": "tokenPrototype"
-					}
-				}
-			]
+				"persistent": "tokenPrototype",
+				"tieToDocuments": true
+			}
 		}
 	]
 }

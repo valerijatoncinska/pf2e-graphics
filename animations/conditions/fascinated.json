@@ -1,21 +1,18 @@
 {
-	"condition:fascinated": [
+	"animationSets": [
 		{
-			"predicates": [
-				{
-					"gte": [
-						"settings:quality",
-						1
-					]
-				}
+			"label": "animation-section",
+			"triggers": [
+				"effect",
+				"start-turn"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.markers.heart.pink.02"
+					"animated-spell-effects-cartoon.misc.charm"
 				],
 				"position": {
-					"type": "dynamic",
+					"type": "static",
 					"location": "SOURCES"
 				},
 				"size": {
@@ -23,39 +20,17 @@
 					"relativeTo": "SOURCES",
 					"scaling": 1.5
 				},
-				"fadeIn": {
-					"duration": 250
+				"elevation": {
+					"sortLayer": "belowTokens"
 				},
 				"fadeOut": {
-					"duration": 500
-				},
-				"rotation": {
-					"type": "absolute",
-					"angle": "random"
+					"duration": 700
 				}
-			},
-			"contents": [
-				{
-					"triggers": [
-						"start-turn",
-						"effect"
-					],
-					"default": true
-				},
-				{
-					"triggers": [
-						"effect"
-					],
-					"predicates": [
-						"settings:persistent"
-					],
-					"execute": {
-						"type": "graphic",
-						"tieToDocuments": true,
-						"persistent": "tokenPrototype"
-					}
-				}
-			]
+			}
 		}
-	]
+	],
+	"rollOption": "condition:fascinated",
+	"id": "EIgxd1x3uXSTgboE",
+	"name": "Condition: Fascinated",
+	"source": "world"
 }

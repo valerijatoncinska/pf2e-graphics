@@ -1,0 +1,39 @@
+{
+	"action:invoke-haunter-of-the-dark": [
+		{
+			"label": "animation-section",
+			"triggers": [
+				"action"
+			],
+			"contents": [
+				{
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.divine_smite.caster.reversed.dark_purple"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "relative",
+							"relativeTo": "SOURCES",
+							"scaling": 2.5
+						}
+					},
+					"label": "animation-section"
+				},
+				{
+					"label": "sound-section",
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"graphics-sfx.magic.dark.curse.07.01"
+						]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,23 +1,23 @@
 {
-	"condition:blinded": [
+	"item:slug:putrid-blast": [
 		{
-			"label": "on token",
+			"label": "putrid-blast-section",
 			"triggers": [
-				"effect"
+				"saving-throw"
 			],
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.condition.curse.01.020.red"
+					"jb2a.smoke.puff.centered.green"
 				],
 				"position": {
-					"type": "dynamic",
+					"type": "static",
 					"location": "SOURCES"
 				},
 				"size": {
 					"type": "relative",
 					"relativeTo": "SOURCES",
-					"scaling": 2
+					"scaling": 3
 				}
 			}
 		}

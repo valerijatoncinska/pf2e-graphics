@@ -1,0 +1,36 @@
+{
+	"item:slug:hurled-debris": [
+		{
+			"label": "trigger-section",
+			"contents": [
+				{
+					"label": "animation-section",
+					"execute": {
+						"type": "graphic",
+						"graphic": [
+							"jb2a.boulder.toss.01.01"
+						],
+						"position": {
+							"type": "static",
+							"location": "SOURCES"
+						},
+						"size": {
+							"type": "directed",
+							"endpoint": "TARGETS"
+						}
+					}
+				},
+				{
+					"execute": {
+						"type": "sound",
+						"sound": [
+							"modules/pf2e-graphics/assets/assets/library/sounds/ovani-sounds/Magic/Earth/Boulder%20Throw%20Cast%20C.ogg"
+						],
+						"volume": 0.3
+					},
+					"label": "audio-section"
+				}
+			]
+		}
+	]
+}

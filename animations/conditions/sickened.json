@@ -1,14 +1,11 @@
 {
-	"condition:immobilized": [
+	"condition:sickened": [
 		{
-			"label": "on token",
-			"triggers": [
-				"effect"
-			],
+			"label": "animation-section",
 			"execute": {
 				"type": "graphic",
 				"graphic": [
-					"jb2a.markers.chain.standard.loop.01.grey"
+					"jb2a.bubble.001.002.loop.green"
 				],
 				"position": {
 					"type": "dynamic",
@@ -20,14 +17,17 @@
 					"scaling": 2
 				},
 				"fadeIn": {
-					"duration": 300
+					"duration": 500
 				},
 				"fadeOut": {
-					"duration": 300
+					"duration": 500
 				},
 				"persistent": "tokenPrototype",
 				"tieToDocuments": true
-			}
+			},
+			"triggers": [
+				"effect"
+			]
 		}
 	]
 }

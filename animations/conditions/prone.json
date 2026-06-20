@@ -1,0 +1,47 @@
+{
+	"condition:prone": [
+		{
+			"label": "sound-section",
+			"triggers": [
+				"effect",
+				"toggle"
+			],
+			"predicates": [
+				{
+					"or": [
+						"origin:size:1",
+						"origin:size:2"
+					]
+				}
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.cooking.glass.prep.drop.vegetables.01.01"
+				],
+				"delay": 300
+			}
+		},
+		{
+			"label": "sound-section",
+			"triggers": [
+				"effect"
+			],
+			"predicates": [
+				{
+					"or": [
+						"origin:size:3",
+						"origin:size:4",
+						"origin:size:5"
+					]
+				}
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.magic.earth.ranged.single.impact.rock.02"
+				]
+			}
+		}
+	]
+}

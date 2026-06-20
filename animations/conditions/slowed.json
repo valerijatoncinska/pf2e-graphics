@@ -1,0 +1,17 @@
+{
+	"condition:slowed": [
+		{
+			"label": "audio",
+			"triggers": [
+				"effect",
+				"start-turn"
+			],
+			"execute": {
+				"type": "sound",
+				"sound": [
+					"graphics-sfx.debuffs.slow.01.{01,02,03,04}"
+				]
+			}
+		}
+	]
+}
