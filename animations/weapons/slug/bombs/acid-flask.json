@@ -1,5 +1,5 @@
-{	
-    "item:slug:acid-flask-major": "item:acid-flask-lesser",
+{
+	"item:slug:acid-flask-major": "item:acid-flask-lesser",
 	"item:slug:acid-flask-greater": "item:acid-flask-lesser",
 	"item:slug:acid-flask-moderate": "item:acid-flask-lesser",
 	"item:acid-flask-lesser": [

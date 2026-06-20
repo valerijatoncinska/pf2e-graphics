@@ -1,5 +1,5 @@
-{	
-    "item:slug:blight-bomb-major": "item:blight-bomb-lesser",
+{
+	"item:slug:blight-bomb-major": "item:blight-bomb-lesser",
 	"item:slug:blight-bomb-greater": "item:blight-bomb-lesser",
 	"item:slug:blight-bomb-moderate": "item:blight-bomb-lesser",
 	"item:blight-bomb-lesser": [

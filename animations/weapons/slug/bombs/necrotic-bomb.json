@@ -1,5 +1,5 @@
 {
-    "item:slug:necrotic-bomb-major": "item:necrotic-bomb-lesser",
+	"item:slug:necrotic-bomb-major": "item:necrotic-bomb-lesser",
 	"item:slug:necrotic-bomb-greater": "item:necrotic-bomb-lesser",
 	"item:slug:necrotic-bomb-moderate": "item:necrotic-bomb-lesser",
 	"item:necrotic-bomb-lesser": [

@@ -59,7 +59,7 @@
 								"position": {
 									"type": "static",
 									"location": "TARGETS",
-							        "missed": false
+									"missed": false
 								}
 							}
 						},
@@ -87,7 +87,7 @@
 								"position": {
 									"type": "static",
 									"location": "TARGETS",
-                                    "missed": false
+									"missed": false
 								},
 								"size": {
 									"type": "relative",
